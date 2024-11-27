@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "slideshow": {
@@ -6,12 +15,12 @@
         "slide_BbDR3x": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/slide-2.png",
+            "image": "shopify://shop_images/slide-2.png",
             "heading": "NEW MAGNESIUM GLYCINATE",
             "heading_size": "h1",
             "subheading": "Specifically formulated to promote sleep, relaxation, and stress resilience",
             "button_label": "View Product",
-            "link": "shopify:\/\/products\/magnesium-powder-drink-raspberry-lemon-flavor-325-mg-of-magnesium-glycinate-per-serving-50-servings",
+            "link": "shopify://products/magnesium-powder-drink-raspberry-lemon-flavor-325-mg-of-magnesium-glycinate-per-serving-50-servings",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": true,
@@ -24,12 +33,12 @@
         "slide_tRXTmk": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/slide-5.png",
+            "image": "shopify://shop_images/slide-5.png",
             "heading": "Subscribe & Save",
             "heading_size": "h1",
             "subheading": "Save 10% with automatic deliveries. Enjoy free shipping on reorders and cancel anytime.",
             "button_label": "Learn more",
-            "link": "shopify:\/\/pages\/subscriptions-dr-berg",
+            "link": "shopify://pages/subscriptions-dr-berg",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": true,
@@ -42,7 +51,7 @@
         "slide_qtz6N8": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/slide-4.png",
+            "image": "shopify://shop_images/slide-4.png",
             "heading": "Same Shop, New Experience",
             "heading_size": "h1",
             "subheading": "Now you can Subscribe & Save, learn about Dr. Berg’s Farm, and see the ingredients we avoid in our products.",
@@ -82,7 +91,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
+        "collection": "frontpage",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,

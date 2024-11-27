@@ -1,8 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/dr-berg-logo.webp",
+    "logo": "shopify://shop_images/dr-berg-logo.webp",
     "logo_width": 300,
-    "favicon": "shopify:\/\/shop_images\/drberg-favicon.png",
+    "favicon": "shopify://shop_images/drberg-favicon.png",
     "type_header_font": "sans-serif",
     "heading_scale": 110,
     "type_body_font": "questrial_n4",
@@ -99,7 +108,7 @@
     "sale_badge_color_scheme": "scheme-4",
     "sold_out_badge_color_scheme": "scheme-1",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "",
@@ -136,7 +145,7 @@
     "content_for_index": [],
     "blocks": {
       "14947870889598929745": {
-        "type": "shopify:\/\/apps\/smartbot\/blocks\/app-embed\/d9407b81-7d3e-4612-91c3-2020086e2073",
+        "type": "shopify://apps/smartbot/blocks/app-embed/d9407b81-7d3e-4612-91c3-2020086e2073",
         "disabled": false,
         "settings": {}
       }
@@ -399,7 +408,7 @@
       "sale_badge_color_scheme": "scheme-4",
       "sold_out_badge_color_scheme": "scheme-1",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
