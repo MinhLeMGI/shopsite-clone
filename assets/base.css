@@ -1709,6 +1709,9 @@ details[open] > .share-button__fallback {
   display: flex;
 }
 
+.search .field {
+}
+
 .field--with-error {
   flex-wrap: wrap;
 }
@@ -1758,6 +1761,7 @@ details[open] > .share-button__fallback {
   margin: var(--inputs-border-width);
 }
 
+input[type="search"]::-webkit-search-cancel-button,
 .field__input::-webkit-search-cancel-button,
 .customer .field input::-webkit-search-cancel-button {
   display: none;
@@ -2481,7 +2485,8 @@ input[type="checkbox"] {
   }
 
   .header--mobile-left {
-    grid-template-columns: auto 2fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -2507,6 +2512,10 @@ input[type="checkbox"] {
     justify-self: center;
     text-align: center;
   }
+
+  .header__icons {
+    margin-right: 12px;
+  }
 }
 
 /* Header icons */
@@ -2515,7 +2524,7 @@ input[type="checkbox"] {
   flex: 1 1 auto;
   display: flex;
   justify-content: flex-end;
-  margin-right: 12px;
+  margin-right: 0;
   gap: 8px;
 }
 
@@ -2570,7 +2579,6 @@ input[type="checkbox"] {
 
 .header__icon--cart {
   position: relative;
-  margin-right: -1.2rem;
 }
 
 .header__icon--menu[aria-expanded="true"]::before {
@@ -2667,9 +2675,10 @@ details[open] .modal-overlay::after {
 }
 
 .search-modal {
-  flex: 6 1 auto;
+  flex: 0 0 100%;
   min-height: calc(100% + var(--inputs-margin-offset) + (2 * var(--inputs-border-width)));
   height: 100%;
+  order: 1;
 }
 
 .search-modal__content {
@@ -2678,7 +2687,7 @@ details[open] .modal-overlay::after {
   justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 0 5rem 0 1rem;
+  padding: 0;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
   position: relative;
 }
@@ -2704,13 +2713,14 @@ details[open] .modal-overlay::after {
   .search-modal__close-button {
     right: 1rem;
   }
-
-  .search-modal__content {
-    padding: 0 6rem;
-  }
 }
 
 @media screen and (min-width: 990px) {
+  .search-modal {
+    flex: 6 1 auto;
+    order: unset;
+  }
+
   .search-modal__form {
     max-width: 74.2rem;
   }
@@ -2718,6 +2728,10 @@ details[open] .modal-overlay::after {
   .search-modal__close-button {
     position: initial;
     margin-left: 0.5rem;
+  }
+
+  .search-modal__content {
+    padding: 0 5rem 0 1rem;
   }
 }
 
@@ -2767,12 +2781,12 @@ details[open] > .header__submenu {
 
 /* Header menu */
 .header__inline-menu {
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   flex-grow: 1;
   display: flex;
   /* margin-left: -1.2rem;
-  grid-area: navigation;
-  display: none; */
+  grid-area: navigation; */
+  display: none;
 }
 
 .header--top-center .header__inline-menu,
