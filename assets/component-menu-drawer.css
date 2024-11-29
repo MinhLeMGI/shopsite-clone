@@ -48,6 +48,12 @@ menu-drawer > details[open] > summary::before {
   height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
 }
 
+@media screen and (min-width: 1024px) {
+  .js .menu-drawer {
+    max-height: 60vh;
+  }
+}
+
 .js details[open] > .menu-drawer,
 .js details[open] > .menu-drawer__submenu {
   transition: transform var(--duration-default) ease, visibility var(--duration-default) ease;
@@ -76,8 +82,24 @@ details[open].menu-opening > .menu-drawer__submenu {
   height: 100%;
 }
 
+.menu-drawer__menu.list-menu {
+  padding: 0 2rem;
+}
+
 .menu-drawer__navigation {
-  padding: 3rem 0;
+  padding: 0 1.5rem;
+}
+
+@media screen and (min-width: 480px) {
+  .menu-drawer__navigation {
+    padding: 0 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-drawer__navigation {
+    padding: 0 3rem;
+  }
 }
 
 .menu-drawer__inner-submenu {
@@ -86,14 +108,18 @@ details[open].menu-opening > .menu-drawer__submenu {
   overflow-y: auto;
 }
 
+.menu-drawer__menu.list-menu > li {
+  border-bottom: 1px solid #07070733;
+}
+
 .js .menu-drawer__menu li {
   margin-bottom: 0.2rem;
 }
 
 .menu-drawer__menu-item {
-  padding: 1.1rem 3rem;
+  padding: 2.4rem 4.4rem 2.4rem 1.6rem;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .menu-drawer summary.menu-drawer__menu-item {
@@ -123,6 +149,14 @@ details[open].menu-opening > .menu-drawer__submenu {
   right: 3rem;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.svg-wrapper.svg-wrapper__rotate {
+  top: unset;
+  transform: rotate(-90deg);
+  width: 20px;
+  height: 20px;
+  right: 1.5rem;
 }
 
 .js .menu-drawer__submenu {

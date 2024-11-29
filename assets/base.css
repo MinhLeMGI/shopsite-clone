@@ -507,7 +507,7 @@ h6:empty {
 .link-with-icon {
   display: inline-flex;
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 0.1rem;
   text-decoration: none;
   margin-bottom: 4.5rem;
@@ -1923,7 +1923,7 @@ input[type="checkbox"] {
   font-style: var(--font-body-style);
   font-weight: var(--font-body-weight);
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
   opacity: 0.85;
   text-align: center;
   background-color: transparent;
@@ -2200,8 +2200,14 @@ input[type="checkbox"] {
 .localization-wrapper {
   grid-area: language-currency;
   align-self: center;
-  display: flex;
+  display: none;
   justify-content: flex-end;
+}
+
+@media screen and (min-width: 750px) {
+  .localization-wrapper {
+    display: flex;
+  }
 }
 
 .localization-wrapper .localization-selector + .disclosure__list-wrapper {
@@ -2798,8 +2804,9 @@ details[open] > .header__submenu {
   display: flex;
   /* margin-left: -1.2rem;
   grid-area: navigation; */
-  font-weight: bold;
+  font-weight: 600;
   display: none;
+  width: 100%;
 }
 
 .header--top-center .header__inline-menu,
@@ -2807,13 +2814,9 @@ details[open] > .header__submenu {
   margin-left: 0;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1280px) {
   .header__inline-menu {
     display: block;
-  }
-
-  .header--top-center .header__inline-menu {
-    justify-self: center;
   }
 
   .header--top-center .header__inline-menu > .list-menu--inline {

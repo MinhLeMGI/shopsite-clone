@@ -302,7 +302,7 @@ a.product__text {
 }
 
 .product__description-title {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .product--no-media .product__title,
