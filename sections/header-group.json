@@ -22,9 +22,7 @@
           }
         }
       },
-      "block_order": [
-        "announcement_fJyYGq"
-      ],
+      "block_order": ["announcement_fJyYGq"],
       "settings": {
         "color_scheme": "scheme-fa401209-7081-4e1d-9253-c80f6355149f",
         "show_line_separator": true,
@@ -53,7 +51,7 @@
         "logo_position": "top-left",
         "menu": "main-menu",
         "menu_type_desktop": "mega",
-        "sticky_header_type": "on-scroll-up",
+        // "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
         "color_scheme": "scheme-2",
         "menu_color_scheme": "scheme-2",
@@ -67,9 +65,5 @@
       }
     }
   },
-  "order": [
-    "announcement_bar_GJWjhq",
-    "announcement_bar_pV7KQJ",
-    "header"
-  ]
+  "order": ["announcement_bar_GJWjhq", "announcement_bar_pV7KQJ", "header"]
 }

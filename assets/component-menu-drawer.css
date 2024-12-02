@@ -196,17 +196,20 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__utility-links {
+  display: none;
   padding: 0;
   background-color: rgba(var(--color-foreground), 0.03);
   position: relative;
 }
 
 .header--has-social .menu-drawer__utility-links {
+  display: block;
   padding: 2rem 3rem;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 767px) {
   .header--has-account:where(:not(.header--has-social):not(.header--has-localizations)) .menu-drawer__utility-links {
+    display: block;
     padding: 2rem 3rem;
   }
 }
