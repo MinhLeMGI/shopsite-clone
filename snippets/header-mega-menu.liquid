@@ -32,7 +32,7 @@
               >
                 <div class="mega-menu__content-wrapper">
                   <ul
-                    class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                    class="mega-menu__list page-width{% if link.links.size < 5 %} mega-menu__list--condensed{% endif %}"
                     role="list"
                   >
                     {%- for childlink in link.links -%}

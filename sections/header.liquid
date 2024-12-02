@@ -242,9 +242,13 @@
 
     connectedCallback() {
       this.header = document.querySelector('.section-header');
+      this.detailsElements = this.querySelectorAll('details');
+      this.observeDetailsToggle();
+
       this.headerIsAlwaysSticky =
         this.getAttribute('data-sticky-type') === 'always' ||
         this.getAttribute('data-sticky-type') === 'reduce-logo-size';
+      console.log('headerIsAlwaysSticky', this.headerIsAlwaysSticky);
       this.headerBounds = {};
 
       this.setHeaderHeight();
@@ -268,6 +272,20 @@
       this.createObserver();
     }
 
+    observeDetailsToggle() {
+      this.detailsElements.forEach((details) => {
+        details.addEventListener('toggle', this.onDetailsToggle.bind(this));
+      });
+    }
+    onDetailsToggle() {
+      const hasOpenDetails = Array.from(this.detailsElements).some((details) => details.open);
+      if (hasOpenDetails) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    }
+
     setHeaderHeight() {
       document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);
     }
@@ -275,6 +293,9 @@
     disconnectedCallback() {
       this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
       window.removeEventListener('scroll', this.onScrollHandler);
+      this.detailsElements.forEach((details) => {
+        details.removeEventListener('toggle', this.onDetailsToggle.bind(this));
+      });
     }
 
     createObserver() {

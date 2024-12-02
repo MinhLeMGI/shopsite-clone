@@ -2809,6 +2809,17 @@ details[open] > .header__submenu {
   width: 100%;
 }
 
+.header__inline-menu:has(details[open])::after {
+  content: "";
+  top: 100%;
+  left: 0;
+  height: calc(var(--viewport-height, 100vh) - (var(--header-bottom-position, 100%)));
+  width: 100%;
+  display: block;
+  position: absolute;
+  background: rgba(var(--color-foreground), 0.5);
+}
+
 .header--top-center .header__inline-menu,
 .header--top-center .header__heading-link {
   margin-left: 0;
