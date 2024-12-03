@@ -26,7 +26,7 @@
 }
 
 .header-wrapper--border-bottom .mega-menu__content {
-  border-top: 0;
+  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
 }
 
 .js .mega-menu__content {
