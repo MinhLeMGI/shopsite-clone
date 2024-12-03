@@ -1267,3 +1267,15 @@ class BulkAdd extends HTMLElement {
 if (!customElements.get('bulk-add')) {
   customElements.define('bulk-add', BulkAdd);
 }
+
+/**
+ * Sets a 'scrollbar-width' custom property on the root element.
+ */
+function setScrollbarWidth() {
+  document.documentElement.style.setProperty(
+    '--scrollbar-width',
+    `${window.innerWidth - document.documentElement.clientWidth}px`
+  );
+}
+
+document.addEventListener('DOMContentLoaded', debounce(setScrollbarWidth, 100));
