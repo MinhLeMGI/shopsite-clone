@@ -129,9 +129,7 @@
                     id="Details-{{ filter.param_name | escape }}-{{ section.id }}"
                     class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
                     data-index="{{ forloop.index }}"
-                    {% if filter_type == 'vertical' and forloop.index == 1 %}
-                      open
-                    {% endif %}
+                    open
                   >
                     <summary
                       class="facets__summary caption-large focus-offset"
@@ -205,9 +203,10 @@
                             {%- endcapture -%}
 
                             {%- capture text_value -%}
-                              <span class="facet-checkbox__text" aria-hidden="true">
-                                <span class="facet-checkbox__text-label">{{- value.label | escape }}</span> ({{- value.count -}})
-                              </span>
+                              <div class="facet-checkbox__text" aria-hidden="true">
+                                <span class="facet-checkbox__text-label">{{- value.label | escape }}</span> 
+                                <span class="facet-checkbox_text_count">({{- value.count -}})</span>
+                              </div>
                               <span class="visually-hidden">
                                 {{- value.label | escape }} (
                                 {%- if value.count == 1 -%}

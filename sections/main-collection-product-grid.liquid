@@ -40,61 +40,100 @@
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
-      <facet-filters-form class="facets facets-vertical-sort page-width small-hide">
-        <form class="facets-vertical-form" id="FacetSortForm">
-          <div class="facet-filters sorting caption">
-            <div class="facet-filters__field">
-              <h2 class="facet-filters__label caption-large text-body">
-                <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-              </h2>
-              <div class="select">
-                {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-                <select
-                  name="sort_by"
-                  class="facet-filters__sort select__select caption-large"
-                  id="SortBy"
-                  aria-describedby="a11y-refresh-page-message"
+      <div id="ProductCountDesktop" class="product-count-desktop">
+        {%- if collection.results_count -%}
+          {{ 'templates.search.results_with_count' | t: terms: collection.terms, count: collection.results_count }}
+        {%- elsif collection.products_count == collection.all_products_count -%}
+          {{ 'products.facets.product_count_simple' | t: count: collection.products_count }}
+        {%- else -%}
+          {{
+            'products.facets.product_count'
+            | t: product_count: collection.products_count, count: collection.all_products_count
+          }}
+        {%- endif -%}
+      </div>
+      <div class="facets-and-filter">
+        <facet-filters-form class="facets facets-vertical-sort page-width small-hide facets-and-filter_left">
+          <form class="facets-vertical-form" id="FacetSortForm">
+            <div class="facet-filters sorting caption">
+              <div class="filter-button">
+                Filter
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  stroke-width="1.25"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                  focusable="false"
+                  role="presentation"
+                  class="icon"
                 >
-                  {%- for option in collection.sort_options -%}
-                    <option
-                      value="{{ option.value | escape }}"
-                      {% if option.value == sort_by %}
-                        selected="selected"
-                      {% endif %}
-                    >
-                      {{ option.name | escape }}
-                    </option>
-                  {%- endfor -%}
-                </select>
-                <span class="svg-wrapper">
-                  {{- 'icon-caret.svg' | inline_asset_content -}}
-                </span>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M1 6h18M1 14h18"></path><circle cx="7" cy="6" r="3"></circle><circle cx="13" cy="14" r="3"></circle>
+                </svg>
+              </div>
+              <div class="facet-filters__field">
+                <h2 class="facet-filters__label caption-large text-body">
+                  <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
+                </h2>
+                <div class="select">
+                  {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+                  <select
+                    name="sort_by"
+                    class="facet-filters__sort select__select caption-large"
+                    id="SortBy"
+                    aria-describedby="a11y-refresh-page-message"
+                  >
+                    {%- for option in collection.sort_options -%}
+                      <option
+                        value="{{ option.value | escape }}"
+                        {% if option.value == sort_by %}
+                          selected="selected"
+                        {% endif %}
+                      >
+                        {{ option.name | escape }}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                  <span class="svg-wrapper">
+                    {{- 'icon-caret.svg' | inline_asset_content -}}
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
+          </form>
+        </facet-filters-form>
+        <div class="facets-view">
+          <span>View as</span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+            focusable="false"
+            role="presentation"
+            class="icon"
+          >
+            <g transform="translate(3 5.727)"><path stroke="currentColor" stroke-width="1.5" d="M4.364 1.091h13.091"></path><circle fill="currentColor" cx="1.091" cy="1.091" r="1.091"></circle></g><g transform="translate(3 10.91)"><path stroke="currentColor" stroke-width="1.5" d="M4.364 1.091h13.091"></path><circle fill="currentColor" cx="1.091" cy="1.091" r="1.091"></circle></g><g transform="translate(3 16.09)"><path stroke="currentColor" stroke-width="1.5" d="M4.364 1.091h13.091"></path><circle fill="currentColor" cx="1.091" cy="1.091" r="1.091"></circle></g>
+          </svg>
 
-          <div class="product-count-vertical light" role="status">
-            <h2 class="product-count__text text-body">
-              <span id="ProductCountDesktop">
-                {%- if collection.results_count -%}
-                  {{
-                    'templates.search.results_with_count'
-                    | t: terms: collection.terms, count: collection.results_count
-                  }}
-                {%- elsif collection.products_count == collection.all_products_count -%}
-                  {{ 'products.facets.product_count_simple' | t: count: collection.products_count }}
-                {%- else -%}
-                  {{
-                    'products.facets.product_count'
-                    | t: product_count: collection.products_count, count: collection.all_products_count
-                  }}
-                {%- endif -%}
-              </span>
-            </h2>
-            {%- render 'loading-spinner' -%}
-          </div>
-        </form>
-      </facet-filters-form>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.5"
+            fill="none"
+            aria-hidden="true"
+            focusable="false"
+            role="presentation"
+            class="icon"
+          >
+            <path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 0h6v6h-6z"></path>
+          </svg>
+        </div>
+      </div>
     {%- endif -%}
 
     <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
