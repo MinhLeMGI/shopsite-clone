@@ -16,17 +16,14 @@
     id="{{ section.id }}"
   >
     <div
-      class="container text-center flex-wrap flex-auto items-center justify-center gap-x-theme promotion__container"
-      {% if settings.animations_enabled != 'disabled' and section.settings.prevent_animation == false %}
-        data-pdx-animate
-      {% endif %}
+      class="container promotion__container"
     >
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
             {%- if block.settings.heading != blank -%}
               <h2
-                class="section__block promotion__heading shrink-0 {{ block.settings.heading_size }}{% unless block.settings.show_on_mobile and block.settings.show_on_desktop %}{% if block.settings.show_on_mobile == false %} hidden{% endif %}{% if block.settings.show_on_desktop %} md:block{% else %} md:hidden{% endif %}{% endunless %}"
+                class="section__block promotion__heading {{ block.settings.heading_size }}{% unless block.settings.show_on_mobile and block.settings.show_on_desktop %}{% if block.settings.show_on_mobile == false %} hidden{% endif %}{% if block.settings.show_on_desktop %} desktop-show{% else %} destop-hidden{% endif %}{% endunless %}"
                 {{ block.shopify_attributes }}
               >
                 {% render 'multiline-text' with block.settings.heading %}
@@ -36,7 +33,7 @@
           {%- when 'text' -%}
             {%- if block.settings.text != blank -%}
               <div
-                class="section__block rte promotion__rte{% if block.settings.enlarge_text %} enlarge-text{% endif %}{% unless block.settings.show_on_mobile and block.settings.show_on_desktop %}{% if block.settings.show_on_mobile == false %} hidden{% endif %}{% if block.settings.show_on_desktop %} md:block{% else %} md:hidden{% endif %}{% endunless %}"
+                class="section__block promotion-text rte promotion__rte {% if block.settings.enlarge_text %} enlarge-text{% endif %}{% unless block.settings.show_on_mobile and block.settings.show_on_desktop %}{% if block.settings.show_on_mobile == false %} hidden{% endif %}{% if block.settings.show_on_desktop %} desktop-show{% else %} destop-hidden{% endif %}{% endunless %}"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.text }}
@@ -45,7 +42,7 @@
 
           {%- when 'button' -%}
             {%- if block.settings.button_label != blank -%}
-              <div class="section__block text-center promotion__button" {{ block.shopify_attributes }}>
+              <div class="section__block promotion__button" {{ block.shopify_attributes }}>
                 <a
                   class="{{ block.settings.button_style }}{% if section.settings.section_height == 'small' %} btn--narrow{% elsif section.settings.section_height == 'xsmall' %} btn--extra-narrow{% endif %}"
                   {% if block.settings.button_link != blank %}
@@ -63,25 +60,25 @@
             {%- if block.settings.discount_code != blank -%}
               {{ 'discount-code.css' | asset_url | stylesheet_tag }}
               <script src="{{ 'discount-code.js' | asset_url }}" defer="defer"></script>
-              <div class="section__block promotion__discount shrink-0 text-center">
+              <div class="section__block promotion__discount">
                 <discount-code
                   class="discount-code inline-flex discount-code--{{ section.settings.section_height }}"
                   {{ block.shopify_attributes }}
                 >
-                  <div class="input-with-button relative">
-                    <span class="discount-code__code input font-bold text-sm js-discount-code">
+                  <div class="input-with-button">
+                    <span class="discount-code__code input js-discount-code">
                       {{- block.settings.discount_code -}}
                     </span>
-                    <button class="discount-code__btn h-full btn btn--sm no-js-hidden js-copy-button">
+                    <button class="discount-code__btn no-js-hidden js-copy-button">
                       {% render 'icon-copy' -%}
                       Copy code
                       {% comment %} {{- 'general.discount_code.copy_button' | t }} {% endcomment %}
                     </button>
                     <div
-                      class="discount-code__success font-bold text-sm absolute top-0 left-0 right-0 bottom-0 overflow-hidden flex items-center justify-center text-theme-text js-copy-success"
+                      class="discount-code__success js-copy-success {% unless color_scheme == 'none' %} color-{{ color_scheme }}{% endunless %}"
                       aria-hidden="true"
                     >
-                      <span class="flex items-center justify-center">
+                      <span class="">
                         {%- render 'icon-check' -%}
                         Copied
                         {% comment %} {{- 'general.discount_code.copy_success' | t -}} {% endcomment %}

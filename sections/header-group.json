@@ -22,9 +22,7 @@
           }
         }
       },
-      "block_order": [
-        "announcement_fJyYGq"
-      ],
+      "block_order": ["announcement_fJyYGq"],
       "settings": {
         "color_scheme": "scheme-fa401209-7081-4e1d-9253-c80f6355149f",
         "show_line_separator": true,
@@ -68,7 +66,7 @@
         "heading-0": {
           "type": "heading",
           "settings": {
-            "heading": "Halloween Sitewide Sale",
+            "heading": "HALLOWEEN SITEWIDE SALE",
             "heading_size": "h4",
             "show_on_mobile": true,
             "show_on_desktop": true
@@ -90,24 +88,14 @@
           }
         }
       },
-      "block_order": [
-        "heading-0",
-        "text-1",
-        "discount-2"
-      ],
+      "block_order": ["heading-0", "text-1", "discount-2"],
       "settings": {
         "section_height": "small",
         "color_scheme": "scheme-65c8b806-69fd-416c-8490-408b5ed44a3d",
         "full_width": true,
-        "dividers": "border-bottom",
-        "prevent_animation": false
+        "dividers": "border-bottom"
       }
     }
   },
-  "order": [
-    "announcement_bar_GJWjhq",
-    "announcement_bar_pV7KQJ",
-    "header",
-    "promotion"
-  ]
+  "order": ["announcement_bar_GJWjhq", "announcement_bar_pV7KQJ", "header", "promotion"]
 }

@@ -199,6 +199,9 @@ body.overflow-hidden {
 .hidden {
   display: none !important;
 }
+.block {
+  display: block !important;
+}
 
 .visually-hidden {
   position: absolute !important;
@@ -3642,6 +3645,11 @@ details-disclosure > details {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.section--full-width {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @keyframes indeterminateAnimation {
