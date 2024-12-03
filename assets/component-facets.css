@@ -188,6 +188,10 @@
 }
 
 .facets-and-filter {
+  width: 100%;
+}
+
+.facets-and-filter .facets-and-filter-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -195,6 +199,8 @@
   margin: 2rem 5rem;
   border-top: 1px solid;
   border-bottom: 1px solid;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .facets-and-filter .facets-and-filter_left {
@@ -225,8 +231,8 @@
   margin-bottom: auto;
 }
 
-.product-count-desktop {
-  margin: 0 5rem;
+.facets-and-filter .product-count-desktop {
+  margin: 0;
 }
 
 .facets__heading {
