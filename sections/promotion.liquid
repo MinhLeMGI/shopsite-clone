@@ -12,7 +12,7 @@
   {%- endunless -%}
 
   <div
-    class="section{% if section.settings.full_width %} section--full-width{% if section.settings.dividers != "none" %} {{ section.settings.dividers }}{% endif %}{% endif %} section--padded-{{ section.settings.section_height }}{% unless color_scheme == 'none' %} color-scheme color-scheme--{{ color_scheme }}{% endunless %}"
+    class="section{% if section.settings.full_width %} section--full-width{% if section.settings.dividers != "none" %} {{ section.settings.dividers }}{% endif %}{% endif %} section--padded-{{ section.settings.section_height }}{% unless color_scheme == 'none' %} color-{{ color_scheme }}{% endunless %}"
     id="{{ section.id }}"
   >
     <div
@@ -103,7 +103,7 @@
 
 {% schema %}
 {
-  "name": "Promo strip",
+  "name": "Promotion",
   "class": "header-promotion",
   "settings": [
     {
