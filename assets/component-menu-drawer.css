@@ -151,9 +151,8 @@ details[open].menu-opening > .menu-drawer__submenu {
   transform: translateY(-50%);
 }
 
-.svg-wrapper.svg-wrapper__rotate {
+.svg-wrapper {
   top: unset;
-  transform: rotate(-90deg);
   width: 20px;
   height: 20px;
   right: 1.5rem;
@@ -181,18 +180,17 @@ details[open].menu-opening > .menu-drawer__submenu {
   text-decoration: none;
   display: flex;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   width: 100%;
   background-color: transparent;
   font-family: var(--font-body-family);
   font-style: var(--font-body-style);
   text-align: left;
+  font-weight: 600;
 }
 
 .menu-drawer__close-button .svg-wrapper {
-  transform: rotate(180deg);
   margin-right: 1rem;
-  width: 15px;
 }
 
 .menu-drawer__utility-links {
