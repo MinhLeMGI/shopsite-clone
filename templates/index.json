@@ -74,7 +74,7 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "slide_height": "small",
+        "slide_height": "medium",
         "slider_visual": "counter",
         "auto_rotate": true,
         "change_slides_speed": 5,
@@ -83,32 +83,60 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
-    "featured-collection-0": {
-      "type": "featured-collection",
+    "multicolumn_HMMqmB": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LMJhQw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/dr-berg-vitamin-b1_850x850_d96094c9-35a8-44b4-b578-b11e888e026f.webp",
+            "title": "Natural Vitamin B1",
+            "text": "<p>This formula delivers premium-quality allithiamine and a potent vitamin B-complex for maximum benefits.</p>",
+            "link_label": "Shop Vitamin B1+",
+            "link": "shopify://products/natural-vitamin-b1"
+          }
+        },
+        "column_TUQTrm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/dr-berg-vitamin-d3-k2_850X850_dcbed9f5-b4e5-4f9f-b801-87d1be745851.webp",
+            "title": "D3 & K2 Vitamins",
+            "text": "<p>Boost your nutrition and get premium-quality vitamins D3 and K2 with Dr. Berg D3 & K2 Vitamin.</p>",
+            "link_label": "Shop D3 & K2",
+            "link": "shopify://products/d3-k2-vitamin"
+          }
+        },
+        "column_kjrmqN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/dr-berg-gallbladder-formula_850x850_5b07853f-18e8-4a55-98bf-8b9b14dced5b.webp",
+            "title": "Gallbladder Formula",
+            "text": "<p>Feel lighter after meals with high-quality digestive enzymes and powerful herbs.</p>",
+            "link_label": "Shop Gallbladder",
+            "link": "shopify://products/gallbladder-formula-extra-strength-90-capsules"
+          }
+        }
+      },
+      "block_order": [
+        "column_LMJhQw",
+        "column_TUQTrm",
+        "column_kjrmqN"
+      ],
       "settings": {
         "title": "",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "frontpage",
-        "products_to_show": 3,
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
         "columns_desktop": 3,
-        "full_width": false,
-        "show_view_all": false,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 60,
-        "padding_bottom": 60
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_collection_TTGRzT": {
@@ -123,7 +151,7 @@
         "products_to_show": 10,
         "columns_desktop": 5,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "color_scheme": "",
@@ -231,7 +259,7 @@
   },
   "order": [
     "slideshow",
-    "featured-collection-0",
+    "multicolumn_HMMqmB",
     "featured_collection_TTGRzT",
     "featured_collection_9p8gJ8",
     "collection_list_yKJQ9L"
