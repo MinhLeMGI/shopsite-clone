@@ -363,3 +363,21 @@ class FacetRemove extends HTMLElement {
 }
 
 customElements.define('facet-remove', FacetRemove);
+
+class ButtonFilter extends HTMLElement {
+  constructor() {
+    super();
+    this.isHidden = false;
+
+    this.querySelector(".filter-button")?.addEventListener("click", () => {
+      const ele = document.querySelector("#main-collection-filters");
+      if (ele) {
+        ele.classList.toggle("hidden-facets", !this.isHidden);
+        this.isHidden = !this.isHidden;
+        this.querySelector(".filter-button svg").classList.toggle("hidden-facets-button", !this.isHidden)
+      }
+    })
+  }
+}
+
+customElements.define('button-filter', ButtonFilter);

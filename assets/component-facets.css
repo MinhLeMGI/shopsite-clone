@@ -191,6 +191,21 @@
   width: 100%;
 }
 
+@media screen and (max-width: 749px) {
+  .facets-and-filter {
+    display: none;
+  }
+}
+
+.hidden-facets {
+  visibility: hidden;
+  width: 0rem;
+}
+
+.facet-filters .filter-button .hidden-facets-button {
+  transform: rotateY(180deg);
+}
+
 .facets-and-filter .facets-and-filter-container {
   display: flex;
   flex-direction: row;
