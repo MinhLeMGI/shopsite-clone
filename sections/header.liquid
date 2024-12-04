@@ -364,7 +364,10 @@
 
     closeSearchModal() {
       this.searchModal = this.searchModal || this.header.querySelector('details-modal');
-      this.searchModal.close(false);
+      console.log('this.searchModal', this.searchModal);
+      if (this.searchModal) {
+        this.searchModal.close(false);
+      }
     }
   }
 
