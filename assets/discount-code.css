@@ -79,6 +79,7 @@
   padding: 6px 12px;
   padding-top: var(--btn-padding-y, 12px);
   padding-bottom: var(--btn-padding-y, 12px);
+  cursor: pointer;
 }
 
 .discount-code__btn .icon {
