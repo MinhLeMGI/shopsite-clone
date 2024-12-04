@@ -14,7 +14,7 @@
   <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- endif -%}
-
+<script src="{{ 'facets-view.js' | asset_url }}" defer="defer"></script>
 {%- if section.settings.quick_add == 'bulk' -%}
   <script src="{{ 'quick-add-bulk.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
@@ -104,36 +104,17 @@
               </div>
             </form>
           </facet-filters-form>
-          <div class="facets-view">
-            <span>View as</span>
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-              focusable="false"
-              role="presentation"
-              class="icon"
-            >
-              <g transform="translate(3 5.727)"><path stroke="currentColor" stroke-width="1.5" d="M4.364 1.091h13.091"></path><circle fill="currentColor" cx="1.091" cy="1.091" r="1.091"></circle></g><g transform="translate(3 10.91)"><path stroke="currentColor" stroke-width="1.5" d="M4.364 1.091h13.091"></path><circle fill="currentColor" cx="1.091" cy="1.091" r="1.091"></circle></g><g transform="translate(3 16.09)"><path stroke="currentColor" stroke-width="1.5" d="M4.364 1.091h13.091"></path><circle fill="currentColor" cx="1.091" cy="1.091" r="1.091"></circle></g>
-            </svg>
-
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="1.5"
-              fill="none"
-              aria-hidden="true"
-              focusable="false"
-              role="presentation"
-              class="icon"
-            >
-              <path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 0h6v6h-6z"></path>
-            </svg>
-          </div>
+          <facets-view>
+            <div class="facets-view">
+              <span>View as</span>
+              <button class="list">
+                {{ 'icon-list.svg' | inline_asset_content }}
+              </button>
+              <button class="grid">
+                {{ 'icon-grid.svg' | inline_asset_content }}
+              </button>
+            </div>
+          </facets-view>
         </div>
       </div>
     {%- endif -%}
