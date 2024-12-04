@@ -89,29 +89,29 @@
         "column_LMJhQw": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/us-electrolyte-capsule-3d2.webp",
-            "title": "Electrolyte Capsules",
-            "text": "<p>Dr. Berg Electrolyte Capsules deliver a high-quality boost of essential electrolyte minerals, including 350 mg of potassium enhanced with our exclusive trace mineral complex for maximum effectiveness. </p>",
-            "link_label": "Shop Electrolyte Capsules",
-            "link": "shopify://products/electrolytes-with-potassium-magnesium-160-vegetable-capsules"
+            "image": "shopify://shop_images/dr-berg-vitamin-b1_850x850_d96094c9-35a8-44b4-b578-b11e888e026f.webp",
+            "title": "Natural Vitamin B1",
+            "text": "<p>This formula delivers premium-quality allithiamine and a potent vitamin B-complex for maximum benefits.</p>",
+            "link_label": "Shop Vitamin B1+",
+            "link": "shopify://products/natural-vitamin-b1"
           }
         },
         "column_TUQTrm": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/US_Cheawble_Vitamin_C_2024_3D2.png",
-            "title": "Chewable Vitamin C Complex",
-            "text": "<p>Dr. Berg Chewable Vitamin C Complex is a premium-quality source of vitamin C. Each serving contains 200 mg of vitamin C and a proprietary blend of four organic nutrient-rich berries: acerola cherry, acai, blueberry, and strawberry.</p>",
-            "link_label": "Shop Vitamin C Complex",
-            "link": "shopify://products/chewable-vitamin-c-complex"
+            "image": "shopify://shop_images/dr-berg-vitamin-d3-k2_850X850_dcbed9f5-b4e5-4f9f-b801-87d1be745851.webp",
+            "title": "D3 & K2 Vitamins",
+            "text": "<p>Boost your nutrition and get premium-quality vitamins D3 and K2 with Dr. Berg D3 & K2 Vitamin.</p>",
+            "link_label": "Shop D3 & K2",
+            "link": "shopify://products/d3-k2-vitamin"
           }
         },
         "column_kjrmqN": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/gallbladder-formula-02_eef916e3-db0a-4e32-9fc2-24ae28088fc2.png",
-            "title": "Gallbladder Formula Extra",
-            "text": "<p>Dr. Berg Gallbladder Formula Extra Strength is made with your digestion in mind. Each serving supplies a carefully balanced complex of enzymes, bile salts, and digestive herbs. </p>",
+            "image": "shopify://shop_images/dr-berg-gallbladder-formula_850x850_5b07853f-18e8-4a55-98bf-8b9b14dced5b.webp",
+            "title": "Gallbladder Formula",
+            "text": "<p>Feel lighter after meals with high-quality digestive enzymes and powerful herbs.</p>",
             "link_label": "Shop Gallbladder",
             "link": "shopify://products/gallbladder-formula-extra-strength-90-capsules"
           }
