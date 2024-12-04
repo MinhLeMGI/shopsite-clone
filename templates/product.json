@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -49,6 +58,18 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "chatty_livechat_helpdesk_inline_chat_button_jdDAUe": {
+          "type": "shopify://apps/chatty-livechat-helpdesk/blocks/inline-chat-button/1c0e135d-e8e1-4fe2-86be-1c36def46675",
+          "settings": {
+            "avada-faqs-contact": "whatsApp",
+            "avada-faqs-button-shape": "round",
+            "avada-faqs-button-label": "Chat with us",
+            "avada-faqs-background-color": "#ffffff",
+            "avada-faqs-label-color": "#000000",
+            "avada-faqs-button-width": "fill",
+            "avada-faqs-device": "all"
+          }
         }
       },
       "block_order": [
@@ -60,7 +81,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "chatty_livechat_helpdesk_inline_chat_button_jdDAUe"
       ],
       "settings": {
         "enable_sticky_info": true,
