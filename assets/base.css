@@ -1227,7 +1227,23 @@ button.shopify-payment-button__button--unbranded {
   transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  background-color: rgba(var(--color-button), var(--alpha-button-background));
+  background: rgb(var(--btn-bg-hover-color))
+    linear-gradient(
+      120deg,
+      rgb(var(--btn-bg-hover-color)) 60%,
+      rgba(var(--color-button), var(--alpha-button-background)) 60% 100%
+    )
+    no-repeat 100% 100%;
+  /* background-color: rgba(var(--color-button), var(--alpha-button-background)); */
+  background-size: 300% 100%;
+  transition: opacity 0.6s ease, color 0.6s ease, background-position 0.4s ease-out;
+}
+
+@media (hover: hover) {
+  .button--primary:not(.slider-nav__btn):hover,
+  .button--secondary:not(.slider-nav__btn):hover {
+    background-position: 0 100%;
+  }
 }
 
 .button:before,
