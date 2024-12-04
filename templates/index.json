@@ -83,6 +83,62 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "multicolumn_HMMqmB": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_LMJhQw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/us-electrolyte-capsule-3d2.webp",
+            "title": "Electrolyte Capsules",
+            "text": "<p>Dr. Berg Electrolyte Capsules deliver a high-quality boost of essential electrolyte minerals, including 350 mg of potassium enhanced with our exclusive trace mineral complex for maximum effectiveness. </p>",
+            "link_label": "Shop Electrolyte Capsules",
+            "link": "shopify://products/electrolytes-with-potassium-magnesium-160-vegetable-capsules"
+          }
+        },
+        "column_TUQTrm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/US_Cheawble_Vitamin_C_2024_3D2.png",
+            "title": "Chewable Vitamin C Complex",
+            "text": "<p>Dr. Berg Chewable Vitamin C Complex is a premium-quality source of vitamin C. Each serving contains 200 mg of vitamin C and a proprietary blend of four organic nutrient-rich berries: acerola cherry, acai, blueberry, and strawberry.</p>",
+            "link_label": "Shop Vitamin C Complex",
+            "link": "shopify://products/chewable-vitamin-c-complex"
+          }
+        },
+        "column_kjrmqN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/gallbladder-formula-02_eef916e3-db0a-4e32-9fc2-24ae28088fc2.png",
+            "title": "Gallbladder Formula Extra",
+            "text": "<p>Dr. Berg Gallbladder Formula Extra Strength is made with your digestion in mind. Each serving supplies a carefully balanced complex of enzymes, bile salts, and digestive herbs. </p>",
+            "link_label": "Shop Gallbladder",
+            "link": "shopify://products/gallbladder-formula-extra-strength-90-capsules"
+          }
+        }
+      },
+      "block_order": [
+        "column_LMJhQw",
+        "column_TUQTrm",
+        "column_kjrmqN"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured-collection-0": {
       "type": "featured-collection",
       "settings": {
@@ -231,6 +287,7 @@
   },
   "order": [
     "slideshow",
+    "multicolumn_HMMqmB",
     "featured-collection-0",
     "featured_collection_TTGRzT",
     "featured_collection_9p8gJ8",
