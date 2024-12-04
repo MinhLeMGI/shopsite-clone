@@ -248,7 +248,6 @@
       this.headerIsAlwaysSticky =
         this.getAttribute('data-sticky-type') === 'always' ||
         this.getAttribute('data-sticky-type') === 'reduce-logo-size';
-      console.log('headerIsAlwaysSticky', this.headerIsAlwaysSticky);
       this.headerBounds = {};
 
       this.setHeaderHeight();
@@ -364,7 +363,6 @@
 
     closeSearchModal() {
       this.searchModal = this.searchModal || this.header.querySelector('details-modal');
-      console.log('this.searchModal', this.searchModal);
       if (this.searchModal) {
         this.searchModal.close(false);
       }
