@@ -1,24 +1,72 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_drNLca": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>About Dr Berg</strong>",
+            "menu": "footer"
+          }
+        },
+        "link_list_dCA94q": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>Customer Support</strong>",
+            "menu": "customer-support"
+          }
+        },
+        "link_list_TqtdBk": {
+          "type": "link_list",
+          "settings": {
+            "heading": "<strong>Account</strong>",
+            "menu": "account"
+          }
+        },
+        "newsletter_HLXewU": {
+          "type": "newsletter",
+          "settings": {
+            "heading": "Newsletter",
+            "text": "<p>Sign up for exclusive offers, original stories, events and more.</p>",
+            "collapse_mobile": true
+          }
+        }
+      },
+      "block_order": [
+        "link_list_drNLca",
+        "link_list_dCA94q",
+        "link_list_TqtdBk",
+        "newsletter_HLXewU"
+      ],
       "settings": {
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-1",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
-        "payment_enable": true,
-        "show_policy": true,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
         "margin_top": 0,
         "padding_top": 44,
         "padding_bottom": 60
       }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }
