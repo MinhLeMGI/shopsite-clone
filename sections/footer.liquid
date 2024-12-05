@@ -153,6 +153,8 @@
                         {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
                       {%- endif -%}
                     </div>
+                  {% when 'newsletter' %}
+                    {% section 'newsletter' %}
                 {%- endcase -%}
               </div>
             {%- endfor -%}
