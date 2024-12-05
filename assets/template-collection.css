@@ -99,7 +99,7 @@
 }
 
 .featured_collection--list {
-  padding: 0 2rem;
+  padding: 0 0 24px 0;
   flex-direction: row;
   flex-wrap: nowrap;
   overflow-x: auto;

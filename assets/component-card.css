@@ -3,6 +3,8 @@
   height: 100%;
   position: relative;
   text-decoration: none;
+  padding: 1rem;
+  border: 1px solid #f2f2f2;
 }
 
 .card {
@@ -125,7 +127,7 @@
 .card__content {
   display: grid;
   grid-template-rows: minmax(0, 1fr) max-content minmax(0, 1fr);
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 100%;
   flex-grow: 1;
 }
