@@ -31,7 +31,7 @@
   endif
 -%}
 
-<div class="card-wrapper animate-arrow {% if wrapper_class and wrapper_class != 'none' %}{{ wrapper_class }}{% else %}collection-card-wrapper{% endif %}">
+<div class="card-collection-wrapper animate-arrow {% if wrapper_class and wrapper_class != 'none' %}{{ wrapper_class }}{% else %}collection-card-wrapper{% endif %}">
   <div
     class="
       card
@@ -104,14 +104,27 @@
                 {%- endif %}
               </a>
             </h3>
-            {%- if card_collection.description != blank -%}
-              <p class="card__caption">
-                {{- card_collection.description | strip_html | truncatewords: 12 -}}
-                <span class="icon-wrap">
-                  {{- 'icon-arrow.svg' | inline_asset_content -}}
-                </span>
-              </p>
-            {%- endif -%}
+            <a
+              {% if card_collection == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ card_collection.url }}"
+              {% endif %}
+              class="full-unstyled-link view-collection-link"
+            >
+              <span>View collection</span>
+              {%- render 'icon-arrow-in-circle' -%}
+            </a>
+            {% comment %}
+              {%- if card_collection.description != blank -%}
+                <p class="card__caption">
+                  {{- card_collection.description | strip_html | truncatewords: 12 -}}
+                  <span class="icon-wrap">
+                    {{- 'icon-arrow.svg' | inline_asset_content -}}
+                  </span>
+                </p>
+              {%- endif -%}
+            {% endcomment %}
           </div>
         </div>
       {%- endif -%}
@@ -133,21 +146,29 @@
               {%- else -%}
                 {{ 'onboarding.collection_title' | t }}
               {%- endif -%}
-              {%- if card_collection.featured_image or card_collection.description == blank -%}
+            </a>
+          </h3>
+          <a
+            {% if card_collection == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ card_collection.url }}"
+            {% endif %}
+            class="full-unstyled-link view-collection-link"
+          >
+            <span>View collection</span>
+            {%- render 'icon-arrow-in-circle' -%}
+          </a>
+          {% comment %}
+            {%- if card_collection.featured_image == null and card_collection.description != blank -%}
+              <p class="card__caption">
+                {{- card_collection.description | strip_html | truncatewords: 12 -}}
                 <span class="icon-wrap">
                   {{- 'icon-arrow.svg' | inline_asset_content -}}
                 </span>
-              {%- endif %}
-            </a>
-          </h3>
-          {%- if card_collection.featured_image == null and card_collection.description != blank -%}
-            <p class="card__caption">
-              {{- card_collection.description | strip_html | truncatewords: 12 -}}
-              <span class="icon-wrap">
-                {{- 'icon-arrow.svg' | inline_asset_content -}}
-              </span>
-            </p>
-          {%- endif -%}
+              </p>
+            {%- endif -%}
+          {% endcomment %}
         </div>
       </div>
     {%- endif -%}
@@ -157,11 +178,12 @@
           <h3 class="card__heading card__heading--placeholder">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
               {{ 'onboarding.collection_title' | t }}
-              <span class="icon-wrap">
-                {{- 'icon-arrow.svg' | inline_asset_content -}}
-              </span>
             </a>
           </h3>
+          <a role="link" aria-disabled="true" class="full-unstyled-link view-collection-link">
+            <span>View collection</span>
+            {%- render 'icon-arrow-in-circle' -%}
+          </a>
         </div>
       </div>
     {%- endif -%}

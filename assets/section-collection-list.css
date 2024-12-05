@@ -56,6 +56,120 @@
   }
 }
 
-.collection-list-view-all {
-  margin-top: 2rem;
+.collection-list-view-all .button {
+  padding-left: 0;
+  text-decoration: underline;
+}
+
+.collection-list-view-all .button:hover {
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.collection-list-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.collection-list-wrapper .collection-list:not(.slider) {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .collection-list-wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .collection-list-wrapper {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
+
+.collection-list-wrapper .title-wrapper-with-link {
+  align-items: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.collection-list-wrapper .title-wrapper-with-link .collection-list-title {
+  font-size: 2.4rem;
+}
+
+@media screen and (min-width: 640px) {
+  .collection-list-wrapper .title-wrapper-with-link .collection-list-title {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .collection-list-wrapper .title-wrapper-with-link .collection-list-title {
+    font-size: 3.2rem;
+  }
+}
+
+.collection-list-wrapper .collection-list__item {
+  width: calc(50% - var(--grid-mobile-horizontal-spacing) / 2);
+  /* flex-grow: 1; */
+  flex-shrink: 0;
+}
+
+@media screen and (min-width: 640px) {
+  .collection-list-wrapper .collection-list__item {
+    width: calc(33.33% - var(--grid-desktop-horizontal-spacing) * 2 / 3);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .collection-list-wrapper .collection-list__item {
+    width: calc(25% - var(--grid-desktop-horizontal-spacing) * 3 / 4);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .collection-list-wrapper .collection-list__item {
+    width: calc(20% - var(--grid-desktop-horizontal-spacing) * 4 / 5);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .collection-list-wrapper .collection-list__item {
+    width: calc(16.66% - var(--grid-desktop-horizontal-spacing) * 5 / 6);
+  }
+}
+
+.card-collection-wrapper .card--card {
+  border: none;
+}
+
+.card-collection-wrapper .card--card .card__inner {
+  border: 1px solid #222325;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.card-collection-wrapper .card--card.card--media .card__content {
+  margin-top: calc(2.5rem - var(--image-padding));
+  font-size: 1.8rem;
+}
+
+.card-collection-wrapper .card__content .card__information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 8px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.card__information .view-collection-link {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 8px;
 }
