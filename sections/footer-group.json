@@ -38,8 +38,8 @@
         "newsletter_HLXewU": {
           "type": "newsletter",
           "settings": {
-            "heading": "Newsletter",
-            "text": "<p>Sign up for exclusive offers, original stories, events and more.</p>",
+            "heading": "Join our 20+ million members",
+            "text": "<p>You will receive our latest health tips, blogs, and promotions</p>",
             "collapse_mobile": true
           }
         }
@@ -51,7 +51,7 @@
         "newsletter_HLXewU"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-2",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
