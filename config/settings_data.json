@@ -106,7 +106,7 @@
     "badge_position": "top left",
     "badge_corner_radius": 4,
     "sale_badge_color_scheme": "scheme-4",
-    "sold_out_badge_color_scheme": "scheme-1",
+    "sold_out_badge_color_scheme": "scheme-2",
     "brand_headline": "",
     "brand_description": "<p></p>",
     "brand_image_width": 100,
