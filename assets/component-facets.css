@@ -49,7 +49,7 @@
   gap: 0.8rem;
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 750px) {
   .facet-filters {
     padding-left: 0rem;
   }
@@ -191,7 +191,7 @@
   width: 100%;
 }
 
-@media screen and (max-width: 749px) {
+@media screen and (max-width: 1023px) {
   .facets-and-filter {
     display: none;
   }
@@ -224,29 +224,40 @@
   display: flex;
 }
 
-.facets-and-filter .facets-view {
+.facets-and-filter-mobile {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 2rem;
+}
+
+.facets-and-filter .facets-view,
+.facets-and-filter-mobile .facets-view {
   display: flex;
   gap: 1.2rem;
 }
 
-.facets-and-filter .facets-view > span {
+.facets-and-filter .facets-view > span,
+.facets-and-filter-mobile .facets-view > span {
   font-size: 1.4rem;
   line-height: 1.4rem;
   font-weight: 600;
 }
 
-.facets-and-filter .facets-view > button {
+.facets-and-filter .facets-view > button,
+.facets-and-filter-mobile .facets-view > button {
   border: none;
   background: unset;
   cursor: pointer;
   padding: 0;
 }
 
-.facets-and-filter .facets-view .active {
+.facets-and-filter .facets-view .active,
+.facets-and-filter-mobile .facets-view .active {
   border-bottom: 2px solid;
 }
 
-.facets-and-filter .facets-view .active > svg {
+.facets-and-filter .facets-view .active > svg,
+.facets-and-filter-mobile .facets-view .active > svg {
   width: 22px;
   height: 22px;
 }
@@ -916,12 +927,12 @@ a.active-facets__button.focused .active-facets__button-inner {
 .mobile-facets__inner {
   background-color: rgb(var(--color-background));
   width: calc(100% - 5rem);
-  margin-left: auto;
+  /* margin-left: auto; */
   height: 100%;
   overflow-y: auto;
   pointer-events: all;
   transition: transform var(--duration-default) ease;
-  max-width: 37.5rem;
+  max-width: 55rem;
   display: flex;
   flex-direction: column;
   border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));
@@ -938,7 +949,7 @@ a.active-facets__button.focused .active-facets__button-inner {
 }
 
 .js .disclosure-has-popup:not(.menu-opening) .mobile-facets__inner {
-  transform: translateX(105vw);
+  transform: translateX(-105vw);
 }
 
 .mobile-facets__header {
@@ -1399,5 +1410,28 @@ input.mobile-facets__checkbox {
 
   .facets-vertical .active-facets__button-remove {
     padding: 0 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .facets-form-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .facets-filter-hide {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1023px) {
+  .facets-vertical {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .facets-vertical .facets-wrapper {
+    padding-right: 0;
   }
 }

@@ -30,7 +30,7 @@
 
 <div class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
-    <facet-filters-form class="facets small-hide">
+    <facet-filters-form class="facets facets-form-hide">
       <form
         id="FacetFiltersForm"
         class="{% if filter_type == 'horizontal' %}facets__form{% else %}facets__form-vertical{% endif %}"
@@ -439,7 +439,7 @@
   {%- endif -%}
   {% comment %}  Drawer and mobile filter {% endcomment %}
   <menu-drawer
-    class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} medium-hide large-up-hide{% endif %}"
+    class="mobile-facets__wrapper{% if filter_type == 'horizontal' or filter_type == 'vertical' %} facets-filter-hide{% endif %}"
     data-breakpoint="mobile"
   >
     <details class="mobile-facets__disclosure disclosure-has-popup">
@@ -448,7 +448,7 @@
           <span class="svg-wrapper">
             {{- 'icon-filter.svg' | inline_asset_content -}}
           </span>
-          <span class="mobile-facets__open-label button-label medium-hide large-up-hide">
+          <span class="mobile-facets__open-label button-label">
             {%- if enable_filtering and enable_sorting -%}
               {{ 'products.facets.filter_and_sort' | t }}
             {%- elsif enable_filtering -%}
@@ -457,11 +457,11 @@
               {{ 'products.facets.sort_button' | t }}
             {%- endif -%}
           </span>
-          <span class="mobile-facets__open-label button-label small-hide">
+          {% comment %} <span class="mobile-facets__open-label button-label">
             {%- if enable_filtering -%}
               {{ 'products.facets.filter_button' | t }}
             {%- endif -%}
-          </span>
+          </span> {% endcomment %}
         </span>
         <span tabindex="0" class="mobile-facets__close">
           <span class="svg-wrapper">
@@ -781,7 +781,7 @@
     </details>
   </menu-drawer>
 
-  <div class="active-facets active-facets-mobile medium-hide large-up-hide">
+  <div class="active-facets active-facets-mobile facets-filter-hide">
     {%- for filter in results.filters -%}
       {%- for value in filter.active_values -%}
         <facet-remove>
@@ -867,26 +867,39 @@
       </form>
     </facet-filters-form>
   {%- endif -%}
-  <div
-    class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} medium-hide large-up-hide{% endif %}"
-    role="status"
-  >
-    <h2 class="product-count__text text-body">
-      <span id="ProductCount">
-        {%- if results.results_count -%}
-          {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
-        {%- elsif results.products_count == results.all_products_count -%}
-          {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
-        {%- else -%}
-          {{
-            'products.facets.product_count'
-            | t: product_count: results.products_count, count: results.all_products_count
-          }}
-        {%- endif -%}
-      </span>
-    </h2>
-    {%- render 'loading-spinner' -%}
+  <div class="facets-and-filter-mobile">
+    <facets-view>
+      <div class="facets-view">
+        <button class="list">
+          {{ 'icon-list.svg' | inline_asset_content }}
+        </button>
+        <button class="grid">
+          {{ 'icon-grid.svg' | inline_asset_content }}
+        </button>
+      </div>
+    </facets-view>
+      <div
+        class="product-count light{% if filter_type == 'vertical' or filter_type == 'horizontal' %} facets-filter-hide{% endif %}"
+        role="status"
+      >
+        <h2 class="product-count__text text-body">
+          <span id="ProductCount">
+            {%- if results.results_count -%}
+              {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
+            {%- elsif results.products_count == results.all_products_count -%}
+              {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
+            {%- else -%}
+              {{
+                'products.facets.product_count'
+                | t: product_count: results.products_count, count: results.all_products_count
+              }}
+            {%- endif -%}
+          </span>
+        </h2>
+        {%- render 'loading-spinner' -%}
+      </div>
   </div>
+
   {%- if filter_type == 'drawer' -%}
     <facet-filters-form class="facets facets-pill small-hide">
       <form id="FacetFiltersPillsForm" class="facets__form">

@@ -75,6 +75,7 @@
                     </svg>
                   </div>
                 </button-filter>
+
                 <div class="facet-filters__field">
                   <h2 class="facet-filters__label caption-large text-body">
                     <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
@@ -127,7 +128,7 @@
       {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
         <aside
           aria-labelledby="verticalTitle"
-          class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+          class="facets-wrapper {% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
           id="main-collection-filters"
           data-id="{{ section.id }}"
         >
