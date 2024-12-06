@@ -148,11 +148,6 @@
         "type": "shopify://apps/chatty-livechat-helpdesk/blocks/app-embed/1c0e135d-e8e1-4fe2-86be-1c36def46675",
         "disabled": false,
         "settings": {}
-      },
-      "9760743957074645847": {
-        "type": "shopify://apps/ea-spin-wheel-email-popups/blocks/app-embed-block/559c6968-8916-4f43-b93f-91b8ea061003",
-        "disabled": false,
-        "settings": {}
       }
     },
     "color_schemes": {
