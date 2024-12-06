@@ -17,21 +17,21 @@
         "link_list_drNLca": {
           "type": "link_list",
           "settings": {
-            "heading": "<strong>About Dr Berg</strong>",
+            "heading": "About Dr Berg",
             "menu": "footer"
           }
         },
         "link_list_dCA94q": {
           "type": "link_list",
           "settings": {
-            "heading": "<strong>Customer Support</strong>",
+            "heading": "Customer Support",
             "menu": "customer-support"
           }
         },
         "link_list_TqtdBk": {
           "type": "link_list",
           "settings": {
-            "heading": "<strong>Account</strong>",
+            "heading": "Account",
             "menu": "account"
           }
         },
