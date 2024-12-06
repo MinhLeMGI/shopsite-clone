@@ -322,7 +322,8 @@
       }
     },
     "footer": {
-      "payment": "Payment methods"
+      "payment": "Payment methods",
+      "back_to_top": "Back to top"
     },
     "featured_blog": {
       "view_all": "View all",

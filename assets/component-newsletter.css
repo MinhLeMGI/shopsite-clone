@@ -7,12 +7,10 @@
   position: relative;
 }
 
-@media screen and (min-width: 750px) {
-  .newsletter-form {
-    align-items: flex-start;
-    /* margin: 0 auto; */
-    max-width: 36rem;
-  }
+.footer__newsletter.newsletter-form {
+  flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 8px;
 }
 
 .newsletter-form__field-wrapper {
@@ -49,6 +47,11 @@
   top: 0;
   height: 100%;
   z-index: 2;
+}
+
+.footer .newsletter-form__button {
+  width: max-content;
+  border: none;
 }
 
 .newsletter-form__button:focus-visible {
