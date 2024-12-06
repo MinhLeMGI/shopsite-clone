@@ -76,7 +76,9 @@
                 {% endif %}
               >
                 {%- if block.settings.heading != blank -%}
-                  <h3 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h3>
+                  <div class="footer-block__heading-container">
+                    <h3 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h3>
+                  </div>
                 {%- endif -%}
 
                 {%- case block.type -%}
@@ -316,6 +318,24 @@
     </div>
   </div>
 </footer>
+
+{% javascript %}
+  const listMenu = document.querySelectorAll('.footer-block__heading-container');
+  listMenu.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (window.innerWidth < 768) {
+        item.classList.toggle('open');
+      }
+    });
+    // item.addEventListener('touchstart', () => {
+    //   event.preventDefault();
+    //   if (window.innerWidth < 768) {
+    //     item.classList.toggle('open');
+    //   }
+    // });
+  });
+{% endjavascript %}
 
 {% schema %}
 {
