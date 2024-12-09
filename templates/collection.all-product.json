@@ -9,6 +9,54 @@
  */
 {
   "sections": {
+    "image_banner_8awGei": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_mQnn3b": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dr. Berg Products",
+            "heading_size": "h1"
+          }
+        },
+        "text_zWmaPh": {
+          "type": "text",
+          "settings": {
+            "text": "Science-backed, high-quality products to empower your health naturally.",
+            "text_style": "body"
+          }
+        },
+        "buttons_Vb9HUp": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_mQnn3b",
+        "text_zWmaPh",
+        "buttons_Vb9HUp"
+      ],
+      "settings": {
+        "image": "{{ collection.image }}",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-left",
+        "show_text_box": true,
+        "desktop_content_alignment": "left",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -21,8 +69,8 @@
       "type": "main-collection-product-grid",
       "settings": {
         "products_per_page": 24,
-        "color_scheme": "scheme-2",
         "columns_desktop": 4,
+        "color_scheme": "scheme-2",
         "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
@@ -39,6 +87,7 @@
     }
   },
   "order": [
+    "image_banner_8awGei",
     "banner",
     "product-grid"
   ]
