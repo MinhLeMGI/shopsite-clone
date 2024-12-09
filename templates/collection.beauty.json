@@ -44,7 +44,7 @@
         "buttons_Vb9HUp"
       ],
       "settings": {
-        "image": "{{ collection.image }}",
+        "image": "shopify://shop_images/Banner_Beauty_3200x900_d3a4333a-94fe-4e70-8ff1-0c9e7cdb87de.webp",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
