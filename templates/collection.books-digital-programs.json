@@ -15,14 +15,14 @@
         "heading_mQnn3b": {
           "type": "heading",
           "settings": {
-            "heading": "Beauty",
+            "heading": "Books & Digital Programs",
             "heading_size": "h1"
           }
         },
         "text_zWmaPh": {
           "type": "text",
           "settings": {
-            "text": "Shop for safe, eco-friendly shampoos, conditioners, oils, and nutritional supplements.",
+            "text": "Take a deep dive into health and wellness with Dr. Berg books and digital programs.",
             "text_style": "body"
           }
         },
@@ -45,6 +45,7 @@
       ],
       "settings": {
         "image": "{{ collection.image }}",
+        "image_2": "shopify://shop_images/books.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
