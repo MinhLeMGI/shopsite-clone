@@ -15,14 +15,14 @@
         "heading_mQnn3b": {
           "type": "heading",
           "settings": {
-            "heading": "Dr. Berg Products",
+            "heading": "Vitamins and Supplements",
             "heading_size": "h1"
           }
         },
         "text_zWmaPh": {
           "type": "text",
           "settings": {
-            "text": "Science-backed, high-quality products to empower your health naturally.",
+            "text": "From garden to bottle, Dr. Berg vitamins, supplements, herbs, and minerals are premium-quality.",
             "text_style": "body"
           }
         },
@@ -50,7 +50,7 @@
         "desktop_content_position": "middle-left",
         "show_text_box": true,
         "desktop_content_alignment": "left",
-        "color_scheme": "",
+        "color_scheme": "scheme-65c8b806-69fd-416c-8490-408b5ed44a3d",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -59,6 +59,7 @@
     },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -67,6 +68,7 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "disabled": true,
       "settings": {
         "products_per_page": 24,
         "columns_desktop": 4,
