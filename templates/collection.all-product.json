@@ -44,7 +44,7 @@
         "buttons_Vb9HUp"
       ],
       "settings": {
-        "image": "{{ collection.image }}",
+        "image": "shopify://shop_images/Banner_All_Products_3200x900_e91cfcf7-c3a4-4bbd-8b73-51302652c5c6.webp",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
