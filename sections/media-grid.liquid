@@ -111,10 +111,6 @@
       "content": "Section style"
     },
     {
-      "type": "header",
-      "content": "Text style"
-    },
-    {
       "type": "color_scheme",
       "id": "section_color_scheme",
       "label": "t:sections.all.colors.label",
@@ -184,41 +180,60 @@
           "info": "t:sections.image-with-text.settings.desktop_image_width.info"
         },
         {
-          "type": "select",
-          "id": "layout",
-          "options": [
-            {
-              "value": "image_first",
-              "label": "t:sections.image-with-text.settings.layout.options__1.label"
-            },
-            {
-              "value": "text_first",
-              "label": "t:sections.image-with-text.settings.layout.options__2.label"
-            }
-          ],
-          "default": "image_first",
-          "label": "t:sections.image-with-text.settings.layout.label",
-          "info": "t:sections.image-with-text.settings.layout.info"
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "t:sections.image-with-text.blocks.heading.settings.heading.default",
+          "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
         },
         {
           "type": "select",
-          "id": "desktop_content_position",
+          "id": "heading_size",
           "options": [
             {
-              "value": "top",
-              "label": "t:sections.image-with-text.settings.desktop_content_position.options__1.label"
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
             },
             {
-              "value": "middle",
-              "label": "t:sections.image-with-text.settings.desktop_content_position.options__2.label"
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
             },
             {
-              "value": "bottom",
-              "label": "t:sections.image-with-text.settings.desktop_content_position.options__3.label"
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__4.label"
+            },
+            {
+              "value": "hxxl",
+              "label": "t:sections.all.heading_size.options__5.label"
             }
           ],
-          "default": "top",
-          "label": "t:sections.image-with-text.settings.desktop_content_position.label"
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "t:sections.image-with-text.blocks.text.settings.text.default",
+          "label": "t:sections.image-with-text.blocks.text.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "t:sections.image-with-text.blocks.text.settings.text_style.options__1.label"
+            },
+            {
+              "value": "subtitle",
+              "label": "t:sections.image-with-text.blocks.text.settings.text_style.options__2.label"
+            }
+          ],
+          "default": "body",
+          "label": "t:sections.image-with-text.blocks.text.settings.text_style.label"
         },
         {
           "type": "select",
@@ -239,22 +254,6 @@
           ],
           "default": "left",
           "label": "t:sections.image-with-text.settings.desktop_content_alignment.label"
-        },
-        {
-          "type": "select",
-          "id": "content_layout",
-          "options": [
-            {
-              "value": "no-overlap",
-              "label": "t:sections.image-with-text.settings.content_layout.options__1.label"
-            },
-            {
-              "value": "overlap",
-              "label": "t:sections.image-with-text.settings.content_layout.options__2.label"
-            }
-          ],
-          "default": "no-overlap",
-          "label": "t:sections.image-with-text.settings.content_layout.label"
         },
         {
           "type": "color_scheme",
