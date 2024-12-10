@@ -263,28 +263,10 @@
       "content": "Style"
     },
     {
-      "type": "select",
+      "type": "color_scheme",
       "id": "color_scheme",
-      "label": "Color scheme",
-      "options": [
-        {
-          "value": "none",
-          "label": "Default"
-        },
-        {
-          "value": "1",
-          "label": "Scheme 1"
-        },
-        {
-          "value": "2",
-          "label": "Scheme 2"
-        },
-        {
-          "value": "3",
-          "label": "Scheme 3"
-        }
-      ],
-      "default": "1"
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
     },
     {
       "type": "checkbox",
@@ -551,7 +533,7 @@
     }
   ],
   "disabled_on": {
-    "groups": ["aside"]
+    "groups": ["footer"]
   }
 }
 {% endschema %}
