@@ -15,14 +15,14 @@
         "heading_mQnn3b": {
           "type": "heading",
           "settings": {
-            "heading": "Deals",
+            "heading": "Sports Nutrition",
             "heading_size": "h1"
           }
         },
         "text_zWmaPh": {
           "type": "text",
           "settings": {
-            "text": "Time’s ticking! Grab these deals before they’re gone.",
+            "text": "Take your workout to the next-level with Dr. Berg sports nutrition products.",
             "text_style": "body"
           }
         },
@@ -44,7 +44,7 @@
         "buttons_Vb9HUp"
       ],
       "settings": {
-        "image": "shopify://shop_images/deals.png",
+        "image": "shopify://shop_images/sports_b855ed65-6e65-4fe1-a414-8882c65b4da2.png",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
