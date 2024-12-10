@@ -11,6 +11,69 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "icons-with-text": {
+      "type": "icons-with-text",
+      "blocks": {
+        "icons-with-text-2": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "heading": "Check your order status",
+            "text": "<p><a href=\"https://shopify.com/55944183880/account/orders\" title=\"My Account Orders\">Track order now</a></p>",
+            "link": ""
+          }
+        },
+        "icons-with-text-1": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon": "chat_bubble",
+            "heading": "Dr. Berg Support Center",
+            "text": "<p><a href=\"#\" title=\"Contact Support\">Contact us now</a></p>",
+            "link": ""
+          }
+        },
+        "icons-with-text-3": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "icon": "truck",
+            "heading": "$4.00 Shipping on orders under $160",
+            "text": "<p><a href=\"/pages/shipping-information\" title=\"Shipping Information\">View shipping information</a></p>",
+            "link": ""
+          }
+        },
+        "icons-with-text-4": {
+          "type": "item",
+          "settings": {
+            "icon": "dollar_sign",
+            "heading": "30-Day Money Back Guarentee",
+            "text": "<p><a href=\"/pages/returns-money-back-guarantee\" title=\"Returns & Satisfaction Guarantee\">View policy details</a></p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["icons-with-text-2", "icons-with-text-1", "icons-with-text-3", "icons-with-text-4"],
+      "custom_css": [
+        ".slider-nav__btn {width: 32px; height: 32px; position: relative;}",
+        ".slider-nav__btn.tap-target--right {right: 8px;}",
+        ".slider-nav__btn.tap-target--left {left: 8px;}"
+      ],
+      "settings": {
+        "heading": "",
+        "heading_align": "text-start",
+        "icon_size": 36,
+        "title_type_scale": "small",
+        "text_type_scale": "small",
+        "icon_position": "beside",
+        "mobile_stack": false,
+        "section_height": "small",
+        "color_scheme": "1",
+        "full_width": true,
+        "dividers": "border-top",
+        "prevent_animation": false
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -44,12 +107,7 @@
           }
         }
       },
-      "block_order": [
-        "link_list_drNLca",
-        "link_list_dCA94q",
-        "link_list_TqtdBk",
-        "newsletter_HLXewU"
-      ],
+      "block_order": ["link_list_drNLca", "link_list_dCA94q", "link_list_TqtdBk", "newsletter_HLXewU"],
       "settings": {
         "color_scheme": "scheme-2",
         "newsletter_enable": false,
@@ -63,7 +121,5 @@
       }
     }
   },
-  "order": [
-    "footer"
-  ]
+  "order": ["icons-with-text", "footer"]
 }
