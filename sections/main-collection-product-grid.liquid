@@ -51,7 +51,7 @@
               'products.facets.product_count'
               | t: product_count: collection.products_count, count: collection.all_products_count
             }}
-          {%- endif -%}
+          {%- endif -%} in {{ collection.title }}
         </div>
         <div class="facets-and-filter-container">
           <facet-filters-form class="facets facets-vertical-sort page-width small-hide facets-and-filter_left">
