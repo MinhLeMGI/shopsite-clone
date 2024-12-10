@@ -3682,3 +3682,22 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+
+.text-body-extra_small {
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+.text-body-small {
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
+
+.text-body-large {
+  font-size: 1.1em;
+  line-height: 1.54em;
+}
+
+.text-body-extra_large {
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
