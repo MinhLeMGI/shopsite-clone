@@ -471,6 +471,7 @@
           </span>
         </span>
       </summary>
+
       <facet-filters-form>
         <form id="FacetFiltersFormMobile" class="mobile-facets">
           <div class="mobile-facets__inner gradient">
@@ -724,7 +725,8 @@
                   class="button button--primary mobile-facets__count"
                   onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
                 >
-                  {{ 'Show ' }} {%- if results.results_count -%}
+                  {{ 'Show ' }}
+                  {%- if results.results_count -%}
                     {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
                   {%- elsif results.products_count == results.all_products_count -%}
                     {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
@@ -918,3 +920,13 @@
     </facet-filters-form>
   {%- endif -%}
 </div>
+
+<script>
+  window.addEventListener('load', () => {
+    document.querySelector('.mobile-facets__open-wrapper.focus-offset')?.addEventListener('click', () => {
+      document.querySelectorAll('#FacetFiltersFormMobile details').forEach((item) => {
+        item.setAttribute('open', true);
+      });
+    });
+  });
+</script>
