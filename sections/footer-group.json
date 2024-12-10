@@ -28,7 +28,7 @@
           "settings": {
             "icon": "dollar_sign",
             "heading": "30-Day Money Back Guarentee",
-            "text": "<p><a href=\"/pages/returns-money-back-guarantee\" title=\"Returns & Satisfaction Guarantee\">View policy details</a></p>",
+            "text": "<p><a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">View policy details</a></p>",
             "link": ""
           }
         }
@@ -40,16 +40,14 @@
       "custom_css": [],
       "settings": {
         "heading": "",
-        "heading_align": "text-start",
+        "heading_alignment": "center",
         "icon_size": 36,
         "title_type_scale": "small",
         "text_type_scale": "small",
-        "icon_position": "beside",
         "section_height": "small",
         "color_scheme": "scheme-65c8b806-69fd-416c-8490-408b5ed44a3d",
         "full_width": true,
-        "dividers": "border-top",
-        "prevent_animation": false
+        "dividers": "border-top"
       }
     },
     "footer": {
