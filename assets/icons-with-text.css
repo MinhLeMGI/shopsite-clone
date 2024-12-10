@@ -1,0 +1,35 @@
+.icons-with-text {
+  margin-top: 30px;
+  border-top: 1px solid #e9e4e4;
+}
+
+.icons-with-text--container {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.icons-with-text--content {
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.icons-with-text--item {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  min-width: 280px;
+  column-gap: 20px;
+}
+
+.icons-with-text__text p {
+  margin: 0;
+}
+
+.icons-with-text__text a {
+  color: #086fba;
+}
+
+.icons-with-text__text a:hover {
+  opacity: 0.6;
+}

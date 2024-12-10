@@ -11,6 +11,45 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "icons-with-text": {
+      "type": "icons-with-text",
+      "blocks": {
+        "icons-with-text-2": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "heading": "Check your order status",
+            "text": "<p><a href=\"https://shopify.com/55944183880/account/orders\" title=\"My Account Orders\">Track order now</a></p>",
+            "link": ""
+          }
+        },
+        "icons-with-text-4": {
+          "type": "item",
+          "settings": {
+            "icon": "dollar_sign",
+            "heading": "30-Day Money Back Guarentee",
+            "text": "<p><a href=\"/policies/privacy-policy\" title=\"Privacy Policy\">View policy details</a></p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "icons-with-text-2",
+        "icons-with-text-4"
+      ],
+      "custom_css": [],
+      "settings": {
+        "heading": "",
+        "heading_alignment": "center",
+        "icon_size": 36,
+        "title_type_scale": "small",
+        "text_type_scale": "small",
+        "section_height": "small",
+        "color_scheme": "scheme-65c8b806-69fd-416c-8490-408b5ed44a3d",
+        "full_width": true,
+        "dividers": "border-top"
+      }
+    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -53,6 +92,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "newsletter_enable": false,
+        "show_back_to_top": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": false,
@@ -64,6 +104,7 @@
     }
   },
   "order": [
+    "icons-with-text",
     "footer"
   ]
 }
