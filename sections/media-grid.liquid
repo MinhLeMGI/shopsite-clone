@@ -1,7 +1,52 @@
 {{ 'media-grid.css' | asset_url | stylesheet_tag }}
 
 <div class="section-{{ section.id }} media-grid color-{{ section.settings.color_scheme }} {% if section.settings.title == blank %} no-heading{% endif %}">
-  <p>11111111111111</p>
+  {%- if section.settings.title != blank -%}
+    <div class="media-grid--header">
+      <h2 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
+    </div>
+  {%- endif -%}
+  <div id="media-grid--{{ section.id }}" class="media-grid--content">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'media' %}
+          <div class="media-container row-span-{{ block.settings.rows }} col-span-{{ block.settings.columns }}">
+            <div
+              class="media-content--image image-with-text__media--{{ section.settings.height }}"
+              {% if section.settings.height == 'adapt' and block.settings.image != blank %}
+                style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
+              {% endif %}
+            >
+              {%- if block.settings.image != blank -%}
+                {%- if block.settings.image_behavior == 'ambient' or block.settings.image_behavior == 'zoom-in' -%}
+                  {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
+                  {%- capture sizes -%}
+                (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
+                (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
+              {%- endcapture -%}
+                {%- else -%}
+                  {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+                  {%- capture sizes -%}
+                (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+              {%- endcapture -%}
+                {%- endif -%}
+                {{
+                  block.settings.image
+                  | image_url: width: 1500
+                  | image_tag: sizes: sizes, widths: widths, fetchpriority: 'auto'
+                }}
+              {%- else -%}
+                {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </div>
+            <div class="media-content--text"></div>
+          </div>
+        {% else %}
+
+      {% endcase %}
+    {% endfor %}
+  </div>
 </div>
 
 {% schema %}
@@ -19,6 +64,34 @@
       "id": "title",
       "label": "Heading",
       "default": "Media grid"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        },
+        {
+          "value": "hxl",
+          "label": "t:sections.all.heading_size.options__4.label"
+        },
+        {
+          "value": "hxxl",
+          "label": "t:sections.all.heading_size.options__5.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
     },
     {
       "type": "select",
@@ -53,6 +126,30 @@
     {
       "type": "header",
       "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.image-with-text.settings.height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.image-with-text.settings.height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.image-with-text.settings.height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.image-with-text.settings.height.options__4.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.image-with-text.settings.height.label"
     },
     {
       "type": "range",
@@ -133,51 +230,6 @@
           "type": "image_picker",
           "id": "image",
           "label": "t:sections.image-with-text.settings.image.label"
-        },
-        {
-          "type": "select",
-          "id": "height",
-          "options": [
-            {
-              "value": "adapt",
-              "label": "t:sections.image-with-text.settings.height.options__1.label"
-            },
-            {
-              "value": "small",
-              "label": "t:sections.image-with-text.settings.height.options__2.label"
-            },
-            {
-              "value": "medium",
-              "label": "t:sections.image-with-text.settings.height.options__3.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.image-with-text.settings.height.options__4.label"
-            }
-          ],
-          "default": "adapt",
-          "label": "t:sections.image-with-text.settings.height.label"
-        },
-        {
-          "type": "select",
-          "id": "desktop_image_width",
-          "options": [
-            {
-              "value": "small",
-              "label": "t:sections.image-with-text.settings.desktop_image_width.options__1.label"
-            },
-            {
-              "value": "medium",
-              "label": "t:sections.image-with-text.settings.desktop_image_width.options__2.label"
-            },
-            {
-              "value": "large",
-              "label": "t:sections.image-with-text.settings.desktop_image_width.options__3.label"
-            }
-          ],
-          "default": "medium",
-          "label": "t:sections.image-with-text.settings.desktop_image_width.label",
-          "info": "t:sections.image-with-text.settings.desktop_image_width.info"
         },
         {
           "type": "inline_richtext",
