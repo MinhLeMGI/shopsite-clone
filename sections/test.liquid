@@ -1,388 +1,58 @@
-{{ 'media-grid.css' | asset_url | stylesheet_tag }}
-
-<div>
-  <p>Media Grid</p>
+<div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
+  <p>11111111111111</p>
 </div>
 
 {% schema %}
 {
-  "name": "Media Grid",
+  "name": "Test",
+  "class": "section",
   "tag": "section",
-  "class": "",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
   "settings": [
     {
-      "type": "header",
-      "content": "Section header"
-    },
-    {
-      "type": "text",
+      "type": "inline_richtext",
       "id": "title",
-      "label": "Heading",
-      "default": "Media grid"
-    },
-    {
-      "type": "select",
-      "id": "heading_align",
-      "label": "Heading alignment",
-      "options": [
-        {
-          "value": "text-start",
-          "label": "Left"
-        },
-        {
-          "value": "text-center",
-          "label": "Center"
-        },
-        {
-          "value": "text-end",
-          "label": "Right"
-        }
-      ],
-      "default": "text-start"
-    },
-    {
-      "type": "text",
-      "id": "button_label",
-      "label": "View more label"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "View more link"
-    },
-    {
-      "type": "header",
-      "content": "Layout"
-    },
-    {
-      "type": "range",
-      "id": "gallery_cols_max",
-      "min": 2,
-      "max": 4,
-      "step": 1,
-      "label": "Maximum columns on large screens",
-      "default": 4
-    },
-    {
-      "type": "checkbox",
-      "id": "mobile_carousel",
-      "label": "Show as a carousel on mobile",
-      "default": false
-    },
-    {
-      "type": "select",
-      "id": "gallery_cols_min",
-      "label": "Minimum columns on mobile",
-      "info": "Only applies when a carousel is not used on mobile.",
-      "options": [
-        {
-          "value": "1",
-          "label": "1"
-        },
-        {
-          "value": "2",
-          "label": "2"
-        }
-      ],
-      "default": "1"
-    },
-    {
-      "type": "range",
-      "id": "fixed_height_desktop",
-      "min": 50,
-      "max": 500,
-      "step": 10,
-      "unit": "px",
-      "label": "Minimum row height on large screens",
-      "default": 180
-    },
-    {
-      "type": "range",
-      "id": "fixed_height_mobile",
-      "min": 50,
-      "max": 500,
-      "step": 10,
-      "unit": "px",
-      "label": "Minimum row height on mobile",
-      "default": 300
-    },
-    {
-      "type": "header",
-      "content": "Section style"
-    },
-    {
-      "type": "select",
-      "id": "section_color_scheme",
-      "label": "Color scheme",
-      "options": [
-        {
-          "value": "none",
-          "label": "Default"
-        },
-        {
-          "value": "1",
-          "label": "Scheme 1"
-        },
-        {
-          "value": "2",
-          "label": "Scheme 2"
-        },
-        {
-          "value": "3",
-          "label": "Scheme 3"
-        }
-      ],
-      "default": "none"
-    },
-    {
-      "type": "header",
-      "content": "Text style"
-    },
-    {
-      "type": "select",
-      "id": "color_scheme",
-      "label": "Color scheme",
-      "options": [
-        {
-          "value": "white",
-          "label": "Transparent background"
-        },
-        {
-          "value": "default",
-          "label": "Default"
-        },
-        {
-          "value": "1",
-          "label": "Scheme 1"
-        },
-        {
-          "value": "2",
-          "label": "Scheme 2"
-        },
-        {
-          "value": "3",
-          "label": "Scheme 3"
-        }
-      ],
-      "default": "white"
-    },
-    {
-      "type": "color",
-      "id": "transparent_content_color",
-      "label": "Text color",
-      "info": "Only applies when the \"Transparent background\" color scheme is chosen.",
-      "default": "#ffffff"
+      "default": "t:sections.multicolumn.settings.title.default",
+      "label": "t:sections.multicolumn.settings.title.label"
     }
   ],
   "blocks": [
     {
-      "type": "media",
-      "name": "Media",
-      "limit": 16,
+      "type": "column",
+      "name": "t:sections.multicolumn.blocks.column.name",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
         },
         {
-          "type": "url",
-          "id": "link_url",
-          "label": "Media link",
-          "info": "Will not be applied if a button link is added."
-        },
-        {
-          "type": "header",
-          "content": "Layout"
-        },
-        {
-          "type": "paragraph",
-          "content": "Check out our user guides for more information on creating grid layouts."
-        },
-        {
-          "type": "range",
-          "id": "columns",
-          "min": 1,
-          "max": 4,
-          "step": 1,
-          "label": "Number of columns wide",
-          "default": 1
-        },
-        {
-          "type": "range",
-          "id": "rows",
-          "min": 1,
-          "max": 3,
-          "step": 1,
-          "label": "Number of rows tall",
-          "default": 1
-        },
-        {
-          "type": "header",
-          "content": "Text overlay - Content"
-        },
-        {
-          "type": "text",
-          "id": "subheading",
-          "label": "Subheading"
+          "type": "inline_richtext",
+          "id": "title",
+          "default": "t:sections.multicolumn.blocks.column.settings.title.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
         },
         {
           "type": "richtext",
-          "id": "title",
-          "label": "Heading",
-          "default": "<p>Media heading</p>"
-        },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "label": "Heading size",
-          "options": [
-            {
-              "value": "h6",
-              "label": "Extra small"
-            },
-            {
-              "value": "h5",
-              "label": "Small"
-            },
-            {
-              "value": "h4",
-              "label": "Medium"
-            },
-            {
-              "value": "h3",
-              "label": "Large"
-            }
-          ],
-          "default": "h4"
+          "id": "text",
+          "default": "t:sections.multicolumn.blocks.column.settings.text.default",
+          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
         },
         {
           "type": "text",
-          "id": "button_label",
-          "label": "Button label"
+          "id": "link_label",
+          "label": "t:sections.multicolumn.blocks.column.settings.link_label.label"
         },
         {
           "type": "url",
-          "id": "button_link",
-          "label": "Button link"
-        },
-        {
-          "type": "header",
-          "content": "Text overlay - Style"
-        },
-        {
-          "type": "select",
-          "id": "overlay_position",
-          "label": "Text position",
-          "options": [
-            {
-              "value": "justify-start items-start",
-              "label": "Top left"
-            },
-            {
-              "value": "justify-center items-start",
-              "label": "Top center"
-            },
-            {
-              "value": "justify-end items-start",
-              "label": "Top right"
-            },
-            {
-              "value": "justify-start items-center",
-              "label": "Middle left"
-            },
-            {
-              "value": "justify-center items-center",
-              "label": "Middle center"
-            },
-            {
-              "value": "justify-end items-center",
-              "label": "Middle right"
-            },
-            {
-              "value": "justify-start items-end",
-              "label": "Bottom left"
-            },
-            {
-              "value": "justify-center items-end",
-              "label": "Bottom center"
-            },
-            {
-              "value": "justify-end items-end",
-              "label": "Bottom right"
-            }
-          ],
-          "default": "justify-start items-end"
-        },
-        {
-          "type": "select",
-          "id": "text_alignment",
-          "label": "Text alignment",
-          "options": [
-            {
-              "value": "text-start",
-              "label": "Left"
-            },
-            {
-              "value": "text-center",
-              "label": "Center"
-            },
-            {
-              "value": "text-end",
-              "label": "Right"
-            }
-          ],
-          "default": "text-start"
-        },
-        {
-          "type": "select",
-          "id": "button_style",
-          "label": "Button style",
-          "options": [
-            {
-              "value": "link",
-              "label": "Link"
-            },
-            {
-              "value": "btn btn--primary",
-              "label": "Primary button"
-            },
-            {
-              "value": "btn btn--secondary",
-              "label": "Secondary button"
-            }
-          ],
-          "default": "btn btn--primary"
-        },
-        {
-          "type": "header",
-          "content": "Style"
-        },
-        {
-          "type": "color",
-          "id": "tint_color",
-          "label": "Media tint color",
-          "default": "#000000"
-        },
-        {
-          "type": "range",
-          "id": "tint_opacity",
-          "min": 0,
-          "max": 60,
-          "step": 5,
-          "unit": "%",
-          "label": "Media tint opacity",
-          "default": 40
+          "id": "link",
+          "label": "t:sections.multicolumn.blocks.column.settings.link.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Media Grid"
+      "name": "Test"
     }
   ]
 }
