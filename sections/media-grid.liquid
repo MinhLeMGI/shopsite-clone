@@ -49,7 +49,16 @@
                   {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
                 {%- endif -%}
               </div>
-              <div class="media-content--text"></div>
+              {% if block.settings.heading != blank and if block.settings.text != blank %}
+                <div class="media-content--text">
+                  {%- if block.settings.heading != blank -%}
+                    <h4 class="h3">{{ block.settings.heading }}</h4>
+                  {%- endif -%}
+                  {%- if block.settings.text != blank -%}
+                    <p class="{{ block.settings.text_style }}">{{ block.settings.text }}</p>
+                  {%- endif -%}
+                </div>
+              {% endif %}
             </div>
           {% else %}
 
@@ -147,12 +156,6 @@
       "default": 4
     },
     {
-      "type": "checkbox",
-      "id": "mobile_carousel",
-      "label": "Show as a carousel on mobile",
-      "default": false
-    },
-    {
       "type": "select",
       "id": "gallery_cols_min",
       "label": "Minimum columns on mobile",
@@ -223,34 +226,34 @@
           "default": "Media Header",
           "label": "t:sections.image-with-text.blocks.heading.settings.heading.label"
         },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            },
-            {
-              "value": "hxl",
-              "label": "t:sections.all.heading_size.options__4.label"
-            },
-            {
-              "value": "hxxl",
-              "label": "t:sections.all.heading_size.options__5.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
-        },
+        //{
+        // "type": "select",
+        //"id": "heading_size",
+        //"options": [
+        // {
+        //   "value": "h2",
+        //   "label": "t:sections.all.heading_size.options__1.label"
+        // },
+        //{
+        //  "value": "h1",
+        //  "label": "t:sections.all.heading_size.options__2.label"
+        //},
+        //{
+        //  "value": "h0",
+        //  "label": "t:sections.all.heading_size.options__3.label"
+        //},
+        //{
+        //  "value": "hxl",
+        //  "label": "t:sections.all.heading_size.options__4.label"
+        //},
+        //{
+        //  "value": "hxxl",
+        //  "label": "t:sections.all.heading_size.options__5.label"
+        //}
+        //],
+        //"default": "h1",
+        //"label": "t:sections.all.heading_size.label"
+        //},
         {
           "type": "richtext",
           "id": "text",
@@ -346,27 +349,27 @@
         {
           "type": "header",
           "content": "t:sections.all.padding.section_padding_heading"
-        },
-        {
-          "type": "range",
-          "id": "padding_top",
-          "min": 0,
-          "max": 100,
-          "step": 4,
-          "unit": "px",
-          "label": "t:sections.all.padding.padding_top",
-          "default": 36
-        },
-        {
-          "type": "range",
-          "id": "padding_bottom",
-          "min": 0,
-          "max": 100,
-          "step": 4,
-          "unit": "px",
-          "label": "t:sections.all.padding.padding_bottom",
-          "default": 36
         }
+        //{
+        //"type": "range",
+        //"id": "padding_top",
+        //"min": 0,
+        //"max": 100,
+        //"step": 4,
+        //"unit": "px",
+        //"label": "t:sections.all.padding.padding_top",
+        //"default": 36
+        //},
+        //{
+        //"type": "range",
+        //"id": "padding_bottom",
+        //"min": 0,
+        //"max": 100,
+        //"step": 4,
+        //"unit": "px",
+        //"label": "t:sections.all.padding.padding_bottom",
+        //"default": 36
+        //}
       ]
     }
   ],
