@@ -45,7 +45,16 @@ if (!customElements.get('quick-add-modal')) {
             opener.removeAttribute('aria-disabled');
             opener.classList.remove('loading');
             opener.querySelector('.loading__spinner').classList.add('hidden');
+            const divEle = this.modalContent.querySelector(".shopify-block.shopify-app-block");
+            const aEle = this.modalContent.querySelector(".shopify-block.shopify-app-block a");
+            if (divEle && aEle) {
+              divEle.style.marginTop = "-1rem";
+              aEle.style.display = "block";
+              aEle.style.padding = "0px";
+              aEle.style.height = "4.5rem";
+            }
           });
+
       }
 
       preprocessHTML(productElement) {
