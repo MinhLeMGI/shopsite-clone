@@ -1191,6 +1191,175 @@
         "name": "이미지 배너"
       }
     },
+    "video-with-text": {
+      "name": "텍스트 포함 이미지",
+      "settings": {
+        "image": {
+          "label": "이미지"
+        },
+        "height": {
+          "options__1": {
+            "label": "이미지에 맞춤"
+          },
+          "options__2": {
+            "label": "작게"
+          },
+          "options__3": {
+            "label": "보통"
+          },
+          "label": "이미지 높이",
+          "options__4": {
+            "label": "크게"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "이미지 우선"
+          },
+          "options__2": {
+            "label": "이미지 두 번째"
+          },
+          "label": "데스크톱 이미지 배치",
+          "info": "기본 모바일 레이아웃은 이미지 우선입니다."
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "작게"
+          },
+          "options__2": {
+            "label": "보통"
+          },
+          "options__3": {
+            "label": "크게"
+          },
+          "label": "데스크톱 이미지 폭",
+          "info": "이미지는 자동으로 모바일에 최적화됩니다."
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "왼쪽"
+          },
+          "options__3": {
+            "label": "오른쪽"
+          },
+          "label": "데스크톱 콘텐츠 정렬",
+          "options__2": {
+            "label": "가운데"
+          }
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "위쪽"
+          },
+          "options__2": {
+            "label": "중간"
+          },
+          "options__3": {
+            "label": "아래쪽"
+          },
+          "label": "데스크톱 콘텐츠 위치"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "겹침 없음"
+          },
+          "options__2": {
+            "label": "겹침"
+          },
+          "label": "콘텐츠 레이아웃"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "왼쪽"
+          },
+          "options__3": {
+            "label": "오른쪽"
+          },
+          "label": "모바일 콘텐츠 정렬",
+          "options__2": {
+            "label": "가운데"
+          }
+        }
+      },
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading": {
+              "label": "제목",
+              "default": "텍스트 포함 이미지"
+            }
+          },
+          "name": "제목"
+        },
+        "text": {
+          "settings": {
+            "text": {
+              "label": "콘텐츠",
+              "default": "<p>이미지와 텍스트를 짝지어 선택한 제품, 컬렉션, 블로그 게시물을 강조합니다. 사용 가능성, 스타일에 대한 자세한 정보를 추가하거나 리뷰를 제공합니다.</p>"
+            },
+            "text_style": {
+              "label": "텍스트 스타일",
+              "options__1": {
+                "label": "본문"
+              },
+              "options__2": {
+                "label": "소제목"
+              }
+            }
+          },
+          "name": "텍스트"
+        },
+        "button": {
+          "settings": {
+            "button_label": {
+              "label": "버튼 레이블",
+              "info": "버튼을 숨기려면 레이블을 비워둡니다.",
+              "default": "버튼 레이블"
+            },
+            "button_link": {
+              "label": "버튼 링크"
+            },
+            "outline_button": {
+              "label": "윤곽 버튼 스타일 사용"
+            }
+          },
+          "name": "버튼"
+        },
+        "caption": {
+          "name": "캡션",
+          "settings": {
+            "text": {
+              "label": "텍스트",
+              "default": "슬로건 추가"
+            },
+            "text_style": {
+              "label": "텍스트 스타일",
+              "options__1": {
+                "label": "소제목"
+              },
+              "options__2": {
+                "label": "대문자"
+              }
+            },
+            "caption_size": {
+              "label": "텍스트 사이즈",
+              "options__1": {
+                "label": "작게"
+              },
+              "options__2": {
+                "label": "보통"
+              },
+              "options__3": {
+                "label": "크게"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "텍스트 포함 이미지"
+      }
+    },
     "image-with-text": {
       "name": "텍스트 포함 이미지",
       "settings": {

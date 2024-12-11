@@ -1191,6 +1191,175 @@
         "name": "Banner de imagem"
       }
     },
+    "video-with-text": {
+      "name": "Imagem com texto",
+      "settings": {
+        "image": {
+          "label": "Imagem"
+        },
+        "height": {
+          "options__1": {
+            "label": "Adaptar à imagem"
+          },
+          "options__2": {
+            "label": "Pequeno"
+          },
+          "options__3": {
+            "label": "Médio"
+          },
+          "label": "Altura da imagem",
+          "options__4": {
+            "label": "Grande"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "Imagem primeiro"
+          },
+          "options__2": {
+            "label": "Segunda imagem"
+          },
+          "label": "Posicionamento da imagem no desktop",
+          "info": "O layout padrão para dispositivos móveis coloca a imagem primeiro."
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "Pequena"
+          },
+          "options__2": {
+            "label": "Média"
+          },
+          "options__3": {
+            "label": "Grande"
+          },
+          "label": "Largura da imagem no desktop",
+          "info": "A imagem é otimizada automaticamente em dispositivos móveis."
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "Esquerda"
+          },
+          "options__2": {
+            "label": "Centro"
+          },
+          "options__3": {
+            "label": "Direita"
+          },
+          "label": "Alinhamento de conteúdo no desktop"
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "Parte superior"
+          },
+          "options__2": {
+            "label": "Meio"
+          },
+          "options__3": {
+            "label": "Parte inferior"
+          },
+          "label": "Posição do conteúdo no desktop"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "Sem sobreposição"
+          },
+          "options__2": {
+            "label": "Com sobreposição"
+          },
+          "label": "Layout do conteúdo"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "Esquerda"
+          },
+          "options__2": {
+            "label": "Centro"
+          },
+          "options__3": {
+            "label": "Direita"
+          },
+          "label": "Alinhamento de conteúdo em dispositivos móveis"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Título",
+          "settings": {
+            "heading": {
+              "label": "Título",
+              "default": "Imagem com texto"
+            }
+          }
+        },
+        "text": {
+          "name": "Texto",
+          "settings": {
+            "text": {
+              "label": "Conteúdo",
+              "default": "<p>Combine um texto com uma imagem para destacar o produto, a coleção ou o post do blog escolhido. Adicione informações sobre disponibilidade, estilo ou até mesmo uma avaliação.</p>"
+            },
+            "text_style": {
+              "label": "Estilo de texto",
+              "options__1": {
+                "label": "Corpo"
+              },
+              "options__2": {
+                "label": "Subtítulo"
+              }
+            }
+          }
+        },
+        "button": {
+          "name": "Botão",
+          "settings": {
+            "button_label": {
+              "label": "Etiqueta de botão",
+              "info": "Deixe a etiqueta em branco para ocultar o botão.",
+              "default": "Etiqueta de botão"
+            },
+            "button_link": {
+              "label": "Link de botão"
+            },
+            "outline_button": {
+              "label": "Usar estilo de botão com contorno"
+            }
+          }
+        },
+        "caption": {
+          "name": "Legenda",
+          "settings": {
+            "text": {
+              "label": "Texto",
+              "default": "Adicione um slogan"
+            },
+            "text_style": {
+              "label": "Estilo de texto",
+              "options__1": {
+                "label": "Subtítulo"
+              },
+              "options__2": {
+                "label": "Letras maiúsculas"
+              }
+            },
+            "caption_size": {
+              "label": "Tamanho do texto",
+              "options__1": {
+                "label": "Pequeno"
+              },
+              "options__2": {
+                "label": "Médio"
+              },
+              "options__3": {
+                "label": "Grande"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Imagem com texto"
+      }
+    },
     "image-with-text": {
       "name": "Imagem com texto",
       "settings": {

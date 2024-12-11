@@ -1191,6 +1191,175 @@
         "name": "Billedbanner"
       }
     },
+    "video-with-text": {
+      "name": "Billede med tekst",
+      "settings": {
+        "image": {
+          "label": "Billede"
+        },
+        "height": {
+          "options__1": {
+            "label": "Tilpas til billede"
+          },
+          "options__2": {
+            "label": "Lille"
+          },
+          "options__3": {
+            "label": "Mellem"
+          },
+          "label": "Billedhøjde",
+          "options__4": {
+            "label": "Stor"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "Billede først"
+          },
+          "options__2": {
+            "label": "Andet billede"
+          },
+          "label": "Billedplacering på computer",
+          "info": "Billede først er standardmobillayoutet."
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "Lille"
+          },
+          "options__2": {
+            "label": "Medium"
+          },
+          "options__3": {
+            "label": "Stor"
+          },
+          "label": "Billedbredde på computer",
+          "info": "Billedet er automatisk optimeret til mobiltelefoner."
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "Venstre"
+          },
+          "options__3": {
+            "label": "Højre"
+          },
+          "label": "Justering af indhold på computer",
+          "options__2": {
+            "label": "Centreret"
+          }
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "Top"
+          },
+          "options__2": {
+            "label": "I midten"
+          },
+          "options__3": {
+            "label": "Bund"
+          },
+          "label": "Placering af indhold på computer"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "Ingen overlapning"
+          },
+          "options__2": {
+            "label": "Overlapning"
+          },
+          "label": "Indholdslayout"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "Venstre"
+          },
+          "options__3": {
+            "label": "Højre"
+          },
+          "label": "Justering af indhold på mobil",
+          "options__2": {
+            "label": "Centreret"
+          }
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Overskrift",
+          "settings": {
+            "heading": {
+              "label": "Overskrift",
+              "default": "Billede med tekst"
+            }
+          }
+        },
+        "text": {
+          "name": "Tekst",
+          "settings": {
+            "text": {
+              "label": "Indhold",
+              "default": "<p>Kombiner tekst med et billede for at fokusere på dit valgte produkt, din valgte kollektion eller dit valgte blogopslag. Tilføj oplysninger om tilgængelighed, stil og eventuelt også en anmeldelse.</p>"
+            },
+            "text_style": {
+              "label": "Teksttypografi",
+              "options__1": {
+                "label": "Brødtekst"
+              },
+              "options__2": {
+                "label": "Undertekst"
+              }
+            }
+          }
+        },
+        "button": {
+          "name": "Knap",
+          "settings": {
+            "button_label": {
+              "label": "Knaptekst",
+              "info": "Lad feltet være tomt for at skjule knappen.",
+              "default": "Knaptekst"
+            },
+            "button_link": {
+              "label": "Knaplink"
+            },
+            "outline_button": {
+              "label": "Brug rammeknaptypografi"
+            }
+          }
+        },
+        "caption": {
+          "name": "Billedtekst",
+          "settings": {
+            "text": {
+              "label": "Tekst",
+              "default": "Tilføj et slogan"
+            },
+            "text_style": {
+              "label": "Teksttypografi",
+              "options__1": {
+                "label": "Underoverskrift"
+              },
+              "options__2": {
+                "label": "Store bogstaver"
+              }
+            },
+            "caption_size": {
+              "label": "Tekststørrelse",
+              "options__1": {
+                "label": "Lille"
+              },
+              "options__2": {
+                "label": "Medium"
+              },
+              "options__3": {
+                "label": "Stor"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Billede med tekst"
+      }
+    },
     "image-with-text": {
       "name": "Billede med tekst",
       "settings": {
