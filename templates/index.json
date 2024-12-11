@@ -254,6 +254,56 @@
         "padding_bottom": 36
       }
     },
+    "video_with_text_wP4WmJ": {
+      "type": "video-with-text",
+      "blocks": {
+        "heading_cCKJRB": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Dr. Berg",
+            "heading_size": "h2"
+          }
+        },
+        "text_Nb6PaQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Dr. Eric Berg, D.C, also known as The Knowledge Doc®, is a pioneering force in the field of health and wellness, distinguished for his innovative approaches to nutrition. </p><p>Driven by his own health challenges and a profound commitment to understanding biochemistry and nutritional science, Dr. Berg has amassed a wealth of knowledge and expertise that has reshaped his approach to healthcare. </p>",
+            "text_style": "body"
+          }
+        },
+        "button_pthibh": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cCKJRB",
+        "text_Nb6PaQ",
+        "button_pthibh"
+      ],
+      "settings": {
+        "video": "shopify://files/videos/drberg-video.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "cover_image": "shopify://shop_images/dr-berg-greenhouse-watering-green-plants.webp",
+        "description": "About Dr. Berg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "media_grid_nht6eG": {
       "type": "media-grid",
       "blocks": {
@@ -343,56 +393,6 @@
         "color_scheme": "scheme-65c8b806-69fd-416c-8490-408b5ed44a3d",
         "transparent_content_color": "#ffffff"
       }
-    },
-    "video_with_text_wP4WmJ": {
-      "type": "video-with-text",
-      "blocks": {
-        "heading_cCKJRB": {
-          "type": "heading",
-          "settings": {
-            "heading": "About Dr. Berg",
-            "heading_size": "h2"
-          }
-        },
-        "text_Nb6PaQ": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Dr. Eric Berg, D.C, also known as The Knowledge Doc®, is a pioneering force in the field of health and wellness, distinguished for his innovative approaches to nutrition. </p><p>Driven by his own health challenges and a profound commitment to understanding biochemistry and nutritional science, Dr. Berg has amassed a wealth of knowledge and expertise that has reshaped his approach to healthcare. </p>",
-            "text_style": "body"
-          }
-        },
-        "button_pthibh": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_cCKJRB",
-        "text_Nb6PaQ",
-        "button_pthibh"
-      ],
-      "settings": {
-        "video": "shopify://files/videos/drberg-video.mp4",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "cover_image": "shopify://shop_images/dr-berg-greenhouse-watering-green-plants.webp",
-        "description": "About Dr. Berg",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -401,7 +401,7 @@
     "featured_collection_TTGRzT",
     "featured_collection_9p8gJ8",
     "collection_list_yKJQ9L",
-    "media_grid_nht6eG",
-    "video_with_text_wP4WmJ"
+    "video_with_text_wP4WmJ",
+    "media_grid_nht6eG"
   ]
 }
