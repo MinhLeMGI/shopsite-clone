@@ -348,7 +348,7 @@
       "settings": {
         "title": "Be a Part of Our Community",
         "heading_size": "h1",
-        "heading_align": "text-center",
+        "heading_align": "center",
         "button_label": "",
         "button_link": "",
         "gallery_cols_max": 4,
