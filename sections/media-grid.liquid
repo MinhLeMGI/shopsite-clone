@@ -4,6 +4,7 @@
   .section-{{ section.id }} .media-container { min-height: calc({{ section.settings.fixed_height_desktop }}px + 8vw); }
   .section-{{ section.id }} .media-container.row-span-2 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 2); }
   .section-{{ section.id }} .media-container.row-span-3 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 3); }
+  .media-grid--header { text-align: {{ section.settings.heading_align }}; }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }} media-grid color-{{ section.settings.color_scheme }} {% if section.settings.title == blank %} no-heading{% endif %}">
@@ -19,7 +20,7 @@
           {% when 'media' %}
             <div class="media-container row-span-{{ block.settings.rows }} col-span-{{ block.settings.columns }}">
               <div
-                class="media-content--image"
+                class="media-content--image has-overlay"
               >
                 {%- if block.settings.image != blank -%}
                   {%- if block.settings.image_behavior == 'ambient' or block.settings.image_behavior == 'zoom-in' -%}
@@ -104,19 +105,19 @@
       "label": "Heading alignment",
       "options": [
         {
-          "value": "text-start",
+          "value": "start",
           "label": "Left"
         },
         {
-          "value": "text-center",
+          "value": "center",
           "label": "Center"
         },
         {
-          "value": "text-end",
+          "value": "end",
           "label": "Right"
         }
       ],
-      "default": "text-start"
+      "default": "start"
     },
     {
       "type": "text",
