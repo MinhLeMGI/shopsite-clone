@@ -262,31 +262,25 @@
           "settings": {
             "image": "shopify://shop_images/affiliate-customer-2.webp",
             "heading": "",
-            "heading_size": "h1",
             "text": "",
             "text_style": "body",
             "desktop_content_alignment": "left",
             "columns": 1,
             "rows": 2,
-            "mobile_content_alignment": "left",
-            "padding_top": 36,
-            "padding_bottom": 36
+            "mobile_content_alignment": "left"
           }
         },
         "media_GBxRxp": {
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/affiliate-customer-3.webp",
-            "heading": "",
-            "heading_size": "h1",
+            "heading": "Test Heading",
             "text": "<p>Post a photo of yourself with your Dr. Berg products for a chance to be featured on our page! Tag us on Facebook and Instagram <strong>@drericberg </strong>and use the hashtag <strong>#drberglove</strong>.</p>",
             "text_style": "body",
             "desktop_content_alignment": "left",
             "columns": 2,
             "rows": 1,
-            "mobile_content_alignment": "left",
-            "padding_top": 36,
-            "padding_bottom": 36
+            "mobile_content_alignment": "left"
           }
         },
         "media_KCbWmM": {
@@ -294,15 +288,12 @@
           "settings": {
             "image": "shopify://shop_images/affiliate-customer-1.webp",
             "heading": "",
-            "heading_size": "h1",
             "text": "",
             "text_style": "body",
             "desktop_content_alignment": "left",
             "columns": 1,
             "rows": 2,
-            "mobile_content_alignment": "left",
-            "padding_top": 36,
-            "padding_bottom": 36
+            "mobile_content_alignment": "left"
           }
         },
         "media_jXiGTd": {
@@ -310,15 +301,12 @@
           "settings": {
             "image": "shopify://shop_images/affiliate-customer-4.webp",
             "heading": "",
-            "heading_size": "h1",
             "text": "",
             "text_style": "body",
             "desktop_content_alignment": "left",
             "columns": 1,
             "rows": 1,
-            "mobile_content_alignment": "left",
-            "padding_top": 36,
-            "padding_bottom": 36
+            "mobile_content_alignment": "left"
           }
         },
         "media_R38JtE": {
@@ -326,15 +314,12 @@
           "settings": {
             "image": "shopify://shop_images/affiliate-customer-6.jpg",
             "heading": "",
-            "heading_size": "h1",
             "text": "",
             "text_style": "body",
             "desktop_content_alignment": "left",
             "columns": 1,
             "rows": 1,
-            "mobile_content_alignment": "left",
-            "padding_top": 36,
-            "padding_bottom": 36
+            "mobile_content_alignment": "left"
           }
         }
       },
@@ -352,7 +337,6 @@
         "button_label": "",
         "button_link": "",
         "gallery_cols_max": 4,
-        "mobile_carousel": false,
         "gallery_cols_min": "1",
         "fixed_height_desktop": 150,
         "fixed_height_mobile": 300,
