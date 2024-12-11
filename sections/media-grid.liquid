@@ -1,10 +1,14 @@
 {{ 'media-grid.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .section-{{ section.id }} .media-container { min-height: calc({{ section.settings.fixed_height_desktop }}px + 8vw); }
-  .section-{{ section.id }} .media-container.row-span-2 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 2); }
-  .section-{{ section.id }} .media-container.row-span-3 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 3); }
-  .media-grid--header { text-align: {{ section.settings.heading_align }}; }
+  .section-{{ section.id }} .media-container { min-height: {{ section.settings.fixed_height_mobile }}px; }
+
+  @media (min-width: 601px) {
+    .section-{{ section.id }} .media-container { min-height: calc({{ section.settings.fixed_height_desktop }}px + 8vw); }
+    .section-{{ section.id }} .media-container.row-span-2 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 2); }
+    .section-{{ section.id }} .media-container.row-span-3 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 3); }
+    .media-grid--header { text-align: {{ section.settings.heading_align }}; }
+  }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }} media-grid color-{{ section.settings.color_scheme }} {% if section.settings.title == blank %} no-heading{% endif %}">
