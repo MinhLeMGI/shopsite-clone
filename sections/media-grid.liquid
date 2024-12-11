@@ -1,5 +1,11 @@
 {{ 'media-grid.css' | asset_url | stylesheet_tag }}
 
+{%- style -%}
+  .media-container { min-height: calc({{ section.settings.fixed_height_desktop }}px + 8vw); }
+  .media-container.row-span-2 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 2); }
+  .media-container.row-span-3 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 3); }
+{%- endstyle -%}
+
 <div class="section-{{ section.id }} media-grid color-{{ section.settings.color_scheme }} {% if section.settings.title == blank %} no-heading{% endif %}">
   {%- if section.settings.title != blank -%}
     <div class="media-grid--header">
@@ -12,10 +18,7 @@
         {% when 'media' %}
           <div class="media-container row-span-{{ block.settings.rows }} col-span-{{ block.settings.columns }}">
             <div
-              class="media-content--image image-with-text__media--{{ section.settings.height }}"
-              {% if section.settings.height == 'adapt' and block.settings.image != blank %}
-                style="padding-bottom: {{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%;"
-              {% endif %}
+              class="media-content--image"
             >
               {%- if block.settings.image != blank -%}
                 {%- if block.settings.image_behavior == 'ambient' or block.settings.image_behavior == 'zoom-in' -%}
@@ -126,30 +129,6 @@
     {
       "type": "header",
       "content": "Layout"
-    },
-    {
-      "type": "select",
-      "id": "height",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.image-with-text.settings.height.options__1.label"
-        },
-        {
-          "value": "small",
-          "label": "t:sections.image-with-text.settings.height.options__2.label"
-        },
-        {
-          "value": "medium",
-          "label": "t:sections.image-with-text.settings.height.options__3.label"
-        },
-        {
-          "value": "large",
-          "label": "t:sections.image-with-text.settings.height.options__4.label"
-        }
-      ],
-      "default": "adapt",
-      "label": "t:sections.image-with-text.settings.height.label"
     },
     {
       "type": "range",
