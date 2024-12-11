@@ -262,7 +262,7 @@
           "settings": {
             "image": "shopify://shop_images/affiliate-customer-2.webp",
             "heading": "",
-            "paragraph": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "paragraph": "",
             "text_style": "body",
             "desktop_content_alignment": "left",
             "columns": 1,
@@ -288,7 +288,7 @@
           "settings": {
             "image": "shopify://shop_images/affiliate-customer-1.webp",
             "heading": "",
-            "paragraph": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "paragraph": "",
             "text_style": "body",
             "desktop_content_alignment": "left",
             "columns": 1,
@@ -301,7 +301,7 @@
           "settings": {
             "image": "shopify://shop_images/affiliate-customer-4.webp",
             "heading": "",
-            "paragraph": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "paragraph": "",
             "text_style": "body",
             "desktop_content_alignment": "left",
             "columns": 1,
@@ -314,7 +314,7 @@
           "settings": {
             "image": "shopify://shop_images/affiliate-customer-6.jpg",
             "heading": "",
-            "paragraph": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "paragraph": "",
             "text_style": "body",
             "desktop_content_alignment": "left",
             "columns": 1,
