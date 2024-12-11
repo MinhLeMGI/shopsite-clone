@@ -1,54 +1,56 @@
 {{ 'media-grid.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-  .media-container { min-height: calc({{ section.settings.fixed_height_desktop }}px + 8vw); }
-  .media-container.row-span-2 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 2); }
-  .media-container.row-span-3 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 3); }
+  .section-{{ section.id }} .media-container { min-height: calc({{ section.settings.fixed_height_desktop }}px + 8vw); }
+  .section-{{ section.id }} .media-container.row-span-2 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 2); }
+  .section-{{ section.id }} .media-container.row-span-3 { min-height: calc(calc({{ section.settings.fixed_height_desktop }}px + 8vw) * 3); }
 {%- endstyle -%}
 
 <div class="section-{{ section.id }} media-grid color-{{ section.settings.color_scheme }} {% if section.settings.title == blank %} no-heading{% endif %}">
-  {%- if section.settings.title != blank -%}
-    <div class="media-grid--header">
-      <h2 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
-    </div>
-  {%- endif -%}
-  <div id="media-grid--{{ section.id }}" class="media-grid--content">
-    {% for block in section.blocks %}
-      {% case block.type %}
-        {% when 'media' %}
-          <div class="media-container row-span-{{ block.settings.rows }} col-span-{{ block.settings.columns }}">
-            <div
-              class="media-content--image"
-            >
-              {%- if block.settings.image != blank -%}
-                {%- if block.settings.image_behavior == 'ambient' or block.settings.image_behavior == 'zoom-in' -%}
-                  {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
-                  {%- capture sizes -%}
-                (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
-                (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
-              {%- endcapture -%}
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <div class="media-grid--header">
+        <h2 class="{{ section.settings.heading_size }}">{{ section.settings.title }}</h2>
+      </div>
+    {%- endif -%}
+    <div id="media-grid--{{ section.id }}" class="media-grid--content">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'media' %}
+            <div class="media-container row-span-{{ block.settings.rows }} col-span-{{ block.settings.columns }}">
+              <div
+                class="media-content--image"
+              >
+                {%- if block.settings.image != blank -%}
+                  {%- if block.settings.image_behavior == 'ambient' or block.settings.image_behavior == 'zoom-in' -%}
+                    {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
+                    {%- capture sizes -%}
+                  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
+                  (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
+                {%- endcapture -%}
+                  {%- else -%}
+                    {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+                    {%- capture sizes -%}
+                  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+                  (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+                {%- endcapture -%}
+                  {%- endif -%}
+                  {{
+                    block.settings.image
+                    | image_url: width: 1500
+                    | image_tag: sizes: sizes, widths: widths, fetchpriority: 'auto'
+                  }}
                 {%- else -%}
-                  {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
-                  {%- capture sizes -%}
-                (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
-                (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
-              {%- endcapture -%}
+                  {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
                 {%- endif -%}
-                {{
-                  block.settings.image
-                  | image_url: width: 1500
-                  | image_tag: sizes: sizes, widths: widths, fetchpriority: 'auto'
-                }}
-              {%- else -%}
-                {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-              {%- endif -%}
+              </div>
+              <div class="media-content--text"></div>
             </div>
-            <div class="media-content--text"></div>
-          </div>
-        {% else %}
+          {% else %}
 
-      {% endcase %}
-    {% endfor %}
+        {% endcase %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 
@@ -188,7 +190,7 @@
     },
     {
       "type": "color_scheme",
-      "id": "section_color_scheme",
+      "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "scheme-1"
     },
