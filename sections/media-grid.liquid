@@ -49,16 +49,16 @@
                   {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
                 {%- endif -%}
               </div>
-              {% if block.settings.heading != blank and if block.settings.text != blank %}
-                <div class="media-content--text">
-                  {%- if block.settings.heading != blank -%}
-                    <h4 class="h3">{{ block.settings.heading }}</h4>
-                  {%- endif -%}
-                  {%- if block.settings.text != blank -%}
-                    <p class="{{ block.settings.text_style }}">{{ block.settings.text }}</p>
-                  {%- endif -%}
-                </div>
-              {% endif %}
+              {% comment %} {% if block.settings.heading != blank or if block.settings.text != blank %} {% endcomment %}
+              <div class="media-content--text">
+                {% comment %} {%- if block.settings.heading != blank -%} {% endcomment %}
+                <h4 class="h3">{{ block.settings.heading }}</h4>
+                {% comment %} {%- endif -%} {% endcomment %}
+                {% comment %} {%- if block.settings.text != blank -%} {% endcomment %}
+                <p class="{{ block.settings.text_style }}">{{ block.settings.text }}</p>
+                {% comment %} {%- endif -%} {% endcomment %}
+              </div>
+              {% comment %} {% endif %} {% endcomment %}
             </div>
           {% else %}
 
