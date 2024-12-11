@@ -55,7 +55,7 @@
                 <h4 class="h3">{{ block.settings.heading }}</h4>
                 {% comment %} {%- endif -%} {% endcomment %}
                 {% comment %} {%- if block.settings.text != blank -%} {% endcomment %}
-                <p class="{{ block.settings.text_style }}">{{ block.settings.text }}</p>
+                <p class="{{ block.settings.text_style }}">{{ block.settings.paragraph }}</p>
                 {% comment %} {%- endif -%} {% endcomment %}
               </div>
               {% comment %} {% endif %} {% endcomment %}
@@ -256,7 +256,7 @@
         //},
         {
           "type": "richtext",
-          "id": "text",
+          "id": "paragraph",
           "default": "t:sections.image-with-text.blocks.text.settings.text.default",
           "label": "t:sections.image-with-text.blocks.text.settings.text.label"
         },
