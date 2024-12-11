@@ -1378,7 +1378,7 @@
           "options__3": {
             "label": "Large"
           },
-          "label": "Desktop image width",
+          "label": "Desktop video width",
           "info": "Image is automatically optimized for mobile."
         },
         "layout": {
@@ -1388,7 +1388,7 @@
           "options__2": {
             "label": "Image second"
           },
-          "label": "Desktop image placement",
+          "label": "Desktop video placement",
           "info": "Image first is the default mobile layout."
         },
         "desktop_content_alignment": {
