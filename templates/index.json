@@ -324,7 +324,7 @@
           "type": "media",
           "settings": {
             "image": "shopify://shop_images/affiliate-customer-3.webp",
-            "heading": "Test Heading",
+            "heading": "",
             "paragraph": "<p>Post a photo of yourself with your Dr. Berg products for a chance to be featured on our page! Tag us on Facebook and Instagram <strong>@drericberg </strong>and use the hashtag <strong>#drberglove</strong>.</p>",
             "text_style": "body",
             "desktop_content_alignment": "left",
