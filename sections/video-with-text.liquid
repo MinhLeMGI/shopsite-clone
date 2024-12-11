@@ -8,6 +8,10 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+  .image-with-text--container {
+    max-width: 1260px;
+  }
+
   .image-with-text__media--placeholder:after {
     background-color: transparent !important;
 
@@ -17,13 +21,46 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 8px !important;
+    overflow: hidden;
   }
+
+  @media screen and (max-width: 768px) {
+    .video-width-text .image-with-text__media {
+      min-height: 400px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .video-width-text .image-with-text__media {
+      min-height: 320px;
+    }
+  }
+
+  @media screen and (max-width: 440px) {
+    .video-width-text .image-with-text__media {
+      min-height: 240px;
+    }
+  }
+
+  .video-width-text .grid--2-col-tablet .grid__item {
+      width: 100%;
+    }
 
   .video-section__media {
     width: 100%;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (max-width: 768px) {
+    .image-with-text__grid--reverse {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    .video-width-text .grid--2-col-tablet .grid__item {
+      width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+    }
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -39,7 +76,7 @@
   assign video_id = section.settings.video.id | default: section.settings.video_url.id
   assign video_alt = section.settings.video.alt | default: section.settings.description
   assign alt = 'sections.video.load_video' | t: description: video_alt | escape
-  assign poster = section.settings.video.preview_image | default: section.settings.cover_image
+  assign poster = section.settings.cover_image | default: section.settings.video.preview_image
 
   if section.settings.video != null
     assign ratio_diff = section.settings.video.aspect_ratio | minus: poster.aspect_ratio | abs
@@ -50,7 +87,7 @@
 -%}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
-  <div class="page-width">
+  <div class="image-with-text--container page-width">
     <div class="image-with-text image-with-text--{{ section.settings.content_layout }} isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == section.settings.section_color_scheme and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
         <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
@@ -79,10 +116,12 @@
             <deferred-media
               class="video-section__media deferred-media gradient global-media-settings{% if section.settings.full_width %} global-media-settings--full-width{% endif %}{% if fix_ratio %} media-fit-cover{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
               data-media-id="{{ video_id }}"
-              {% if poster != null %}
-                style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
-              {% endif %}
             >
+              {% comment %}
+                {% if poster != null %}
+                  style="--ratio-percent: {{ 1 | divided_by: poster.aspect_ratio | times: 100 }}%;"
+                {% endif %}
+              {% endcomment %}
               <button
                 id="Deferred-Poster-Modal-{{ video_id }}"
                 class="video-section__poster media deferred-media__poster media--landscape"
@@ -152,23 +191,32 @@
             {%- for block in section.blocks -%}
               {% case block.type %}
                 {%- when 'heading' -%}
-                  <h2
-                    class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
-                    {{ block.shopify_attributes }}
-                  >
-                    {{ block.settings.heading }}
-                  </h2>
+                  {% if block.settings.heading != blank %}
+                    <h2
+                      class="image-with-text__heading inline-richtext {{ block.settings.heading_size }}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {{ block.settings.heading }}
+                    </h2>
+                  {% endif %}
                 {%- when 'caption' -%}
-                  <p
-                    class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
-                    {{ block.shopify_attributes }}
-                  >
-                    {{ block.settings.caption | escape }}
-                  </p>
+                  {% if block.settings.caption != blank %}
+                    <p
+                      class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {{ block.settings.caption | escape }}
+                    </p>
+                  {% endif %}
                 {%- when 'text' -%}
-                  <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                    {{ block.settings.text }}
-                  </div>
+                  {% if block.settings.text != blank %}
+                    <div
+                      class="image-with-text__text rte {{ block.settings.text_style }}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {{ block.settings.text }}
+                    </div>
+                  {% endif %}
                 {%- when 'button' -%}
                   {%- if block.settings.button_label != blank -%}
                     <a
