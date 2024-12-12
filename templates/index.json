@@ -248,6 +248,7 @@
         "columns_desktop": 5,
         "color_scheme": "scheme-65c8b806-69fd-416c-8490-408b5ed44a3d",
         "show_view_all": true,
+        "view_all_collection": "all",
         "columns_mobile": "2",
         "swipe_on_mobile": false,
         "padding_top": 36,
