@@ -23,6 +23,10 @@
           "type": "title",
           "settings": {}
         },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
         "seguno_reviews_review_rating_4EanWa": {
           "type": "shopify://apps/seguno-reviews/blocks/review_rating/a10c353e-1472-4621-ba04-289c48879459",
           "settings": {
@@ -33,10 +37,6 @@
             "star_color": "#000000",
             "text_color": "#000000"
           }
-        },
-        "rating": {
-          "type": "rating",
-          "settings": {}
         },
         "price": {
           "type": "price",
@@ -60,10 +60,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "seguno_reviews_review_button_WUr8GD": {
           "type": "shopify://apps/seguno-reviews/blocks/review_button/a10c353e-1472-4621-ba04-289c48879459",
           "settings": {
@@ -83,13 +79,12 @@
       "block_order": [
         "vendor",
         "title",
+        "description",
         "seguno_reviews_review_rating_4EanWa",
-        "rating",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "seguno_reviews_review_button_WUr8GD"
       ],
       "settings": {
