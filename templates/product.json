@@ -71,7 +71,7 @@
             "product_exclusion_tag": "reviews-excluded,skip-review-request-email",
             "content": "<p>We'd love to hear your feedback! Please share your thoughts with us directly by writing a review. Thanks!</p>",
             "font_size": 18,
-            "alignment": "center",
+            "alignment": "start",
             "font_weight": true,
             "accent_color": "#000000",
             "accent_text_color": "#ffffff",
