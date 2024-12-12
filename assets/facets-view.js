@@ -19,7 +19,6 @@ class FacetsView extends HTMLElement {
     const productGridEle = document.querySelector("#product-grid");
     const isListView = mode === "list"
     productGridEle?.classList.toggle("product-list", isListView);
-
   }
 }
 

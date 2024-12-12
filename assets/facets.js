@@ -106,6 +106,11 @@ class FacetFiltersForm extends HTMLElement {
       '.facets-container .loading__spinner, facet-filters-form .loading__spinner'
     );
     loadingSpinners.forEach((spinner) => spinner.classList.add('hidden'));
+    
+    const productGridEle = document.querySelector("#product-grid");
+    const mode = localStorage.getItem("view") ?? "grid";
+    const isListView = mode === "list"
+    productGridEle?.classList.toggle("product-list", isListView);
   }
 
   static renderFilters(html, event) {
@@ -279,7 +284,7 @@ class FacetFiltersForm extends HTMLElement {
         }
       });
       this.onSubmitForm(forms.join('&'), event);
-    }
+    }    
   }
 
   onActiveFilterClick(event) {
