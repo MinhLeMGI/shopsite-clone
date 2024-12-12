@@ -52,18 +52,6 @@
         "description": {
           "type": "description",
           "settings": {}
-        },
-        "chatty_livechat_helpdesk_inline_chat_button_jdDAUe": {
-          "type": "shopify://apps/chatty-livechat-helpdesk/blocks/inline-chat-button/1c0e135d-e8e1-4fe2-86be-1c36def46675",
-          "settings": {
-            "avada-faqs-contact": "email",
-            "avada-faqs-button-shape": "square",
-            "avada-faqs-button-label": "Email us",
-            "avada-faqs-background-color": "#ffffff",
-            "avada-faqs-label-color": "#000000",
-            "avada-faqs-button-width": "fill",
-            "avada-faqs-device": "all"
-          }
         }
       },
       "block_order": [
@@ -74,8 +62,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
-        "chatty_livechat_helpdesk_inline_chat_button_jdDAUe"
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
