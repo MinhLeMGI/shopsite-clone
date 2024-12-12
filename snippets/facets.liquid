@@ -497,6 +497,101 @@
               id="FacetsWrapperMobile"
               class="mobile-facets__main gradient {% if filter_type == 'horizontal' %}facets__form{% else %}facets__form-vertical-mobile{% endif %}"
             >
+              {%- if enable_sorting -%}
+                <details
+                  id="Details-Mobile-SortBy-{{ section.id }}"
+                  {% comment %} class="mobile-facets__details js-filter{% if filter_type == 'drawer' %} medium-hide large-up-hide{% endif %}" {% endcomment %}
+                  data-index="mobile-{{ forloop.index }}"
+                  class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
+                  data-index="{{ forloop.index }}"
+                  open
+                >
+                  <summary
+                    class="facets__summary caption-large focus-offset"
+                    aria-label="{{ 'products.facets.sort_by_label' | t }}"
+                  >
+                    <div>
+                      <span class="facets__summary-label">
+                        {{ 'products.facets.sort_by_label' | t }}
+                      </span>
+                      {{- 'icon-caret.svg' | inline_asset_content -}}
+                    </div>
+                  </summary>
+                  <div class="mobile-facets__summary">
+                    <div class="mobile-facets__sort">
+                      {% comment %}
+                        <label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>
+                        <div class="select">
+                          <select
+                            name="sort_by"
+                            class="select__select"
+                            id="SortBy-mobile"
+                            aria-describedby="a11y-refresh-page-message"
+                          >
+                            {%- for option in results.sort_options -%}
+                              <option
+                                value="{{ option.value | escape }}"
+                                {% if option.value == sort_by %}
+                                  selected="selected"
+                                {% endif %}
+                              >
+                                {{ option.name | escape }}
+                              </option>
+                            {%- endfor -%}
+                          </select>
+                          <span class="svg-wrapper">
+                            {{- 'icon-caret.svg' | inline_asset_content -}}
+                          </span>
+                        </div>
+                      {% endcomment %}
+
+                      {%- for option in results.sort_options -%}
+                        <label for="mobile-{{ option.value }}" class="">
+                          <input
+                            type="radio"
+                            name="sort_by"
+                            value="{{ option.value | escape }}"
+                            id="mobile-{{ option.value }}"
+                            {% if option.value == sort_by %}
+                              checked
+                            {% endif %}
+                          >
+
+                          {% comment %}
+                            {%- if presentation == 'image' -%}
+                              <div class="facets__image-wrapper">
+                                {%- if value.image -%}
+                                  {{
+                                    value.image
+                                    | image_url: width: 300
+                                    | image_tag: class: 'facets__image', alt: value.alt
+                                  }}
+                                {%- endif -%}
+                              </div>
+                            {%- else -%}
+                          {% endcomment %}
+                          {% comment %} {{- 'square.svg' | inline_asset_content -}} {% endcomment %}
+                          <div class="icon-radio">
+                            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                              <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor"/>
+                            </svg>
+
+                            <div class="svg-checked">
+                              <svg width="14" height="14" viewBox="0 0 8 8" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="4" cy="4" r="3" fill="black"/>
+                              </svg>
+                            </div>
+                          </div>
+                          {% comment %} {%- endif -%} {% endcomment %}
+
+                          {{ option.name | escape }}
+                        </label>
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                </details>
+              {%- endif -%}
+
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
                   {% liquid
@@ -681,42 +776,6 @@
                       </details>
                   {% endcase %}
                 {%- endfor -%}
-              {%- endif -%}
-
-              {%- if enable_sorting -%}
-                <div
-                  id="Details-Mobile-SortBy-{{ section.id }}"
-                  class="mobile-facets__details js-filter{% if filter_type == 'drawer' %} medium-hide large-up-hide{% endif %}"
-                  data-index="mobile-{{ forloop.index }}"
-                >
-                  <div class="mobile-facets__summary">
-                    <div class="mobile-facets__sort">
-                      <label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>
-                      <div class="select">
-                        <select
-                          name="sort_by"
-                          class="select__select"
-                          id="SortBy-mobile"
-                          aria-describedby="a11y-refresh-page-message"
-                        >
-                          {%- for option in results.sort_options -%}
-                            <option
-                              value="{{ option.value | escape }}"
-                              {% if option.value == sort_by %}
-                                selected="selected"
-                              {% endif %}
-                            >
-                              {{ option.name | escape }}
-                            </option>
-                          {%- endfor -%}
-                        </select>
-                        <span class="svg-wrapper">
-                          {{- 'icon-caret.svg' | inline_asset_content -}}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               {%- endif -%}
 
               <div class="mobile-facets__footer">

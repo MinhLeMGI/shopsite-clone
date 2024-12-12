@@ -1121,7 +1121,7 @@ details.menu-opening .mobile-facets__close .svg-wrapper {
 }
 
 .mobile-facets__summary {
-  padding: 1.3rem 2.5rem;
+  padding: 0rem 0rem 2rem;
 }
 
 .mobile-facets__summary .svg-wrapper {
@@ -1242,11 +1242,44 @@ input.mobile-facets__checkbox {
 
 .mobile-facets__sort {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .mobile-facets__sort label {
   flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+.mobile-facets__sort > label > input[type="radio"]:checked ~ .icon-radio > .svg-checked {
+  display: block;
+}
+
+.mobile-facets__sort label input[type="radio"] {
+  display: none;
+}
+
+.mobile-facets__sort label .icon-radio {
+  width: 2.2rem;
+  position: relative;
+}
+
+.mobile-facets__sort label .icon-radio .svg-checked {
+  display: none;
+  position: absolute;
+  left: 0.2rem;
+  top: 0.2rem;
+}
+
+.mobile-facets__sort label .icon-radio .svg-checked svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.mobile-facets__sort label svg {
+  width: 2.2rem;
+  height: 2.2rem;
 }
 
 .mobile-facets__sort .select {
