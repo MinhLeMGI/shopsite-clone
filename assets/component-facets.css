@@ -759,7 +759,7 @@ span.active-facets__button-inner {
   padding: 0.25rem 1.25rem;
   display: flex;
   align-items: center;
-  background-color: unset;
+  background-color: unset !important;
 }
 
 span.active-facets__button-inner:before,
