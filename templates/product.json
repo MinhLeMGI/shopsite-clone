@@ -23,10 +23,6 @@
           "type": "title",
           "settings": {}
         },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "seguno_reviews_review_rating_4EanWa": {
           "type": "shopify://apps/seguno-reviews/blocks/review_rating/a10c353e-1472-4621-ba04-289c48879459",
           "settings": {
@@ -37,6 +33,10 @@
             "star_color": "#000000",
             "text_color": "#000000"
           }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
         },
         "price": {
           "type": "price",
@@ -79,8 +79,8 @@
       "block_order": [
         "vendor",
         "title",
-        "description",
         "seguno_reviews_review_rating_4EanWa",
+        "description",
         "price",
         "variant_picker",
         "quantity_selector",
