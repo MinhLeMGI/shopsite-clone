@@ -43,7 +43,7 @@
             {% endif %}
           >
             <a
-              href="{{ routes.collections_url }}"
+              href="{% if section.settings.view_all_collection.url %}{{ section.settings.view_all_collection.url }}{% else %}{{ routes.collections_url }}{% endif %}"
               class="button"
               id="ViewAllButton-{{ section.id }}"
               aria-labelledby="ViewAllButton-{{ section.id }} SectionHeading-{{ section.id }}"
@@ -208,6 +208,11 @@
       "id": "show_view_all",
       "default": false,
       "label": "t:sections.collection-list.settings.show_view_all.label"
+    },
+    {
+      "type": "collection",
+      "id": "view_all_collection",
+      "label": "t:sections.collection-list.blocks.featured_collection.settings.collection.label"
     },
     {
       "type": "header",
