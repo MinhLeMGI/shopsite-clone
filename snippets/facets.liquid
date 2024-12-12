@@ -519,32 +519,6 @@
                   </summary>
                   <div class="mobile-facets__summary">
                     <div class="mobile-facets__sort">
-                      {% comment %}
-                        <label for="SortBy-mobile">{{ 'products.facets.sort_by_label' | t }}</label>
-                        <div class="select">
-                          <select
-                            name="sort_by"
-                            class="select__select"
-                            id="SortBy-mobile"
-                            aria-describedby="a11y-refresh-page-message"
-                          >
-                            {%- for option in results.sort_options -%}
-                              <option
-                                value="{{ option.value | escape }}"
-                                {% if option.value == sort_by %}
-                                  selected="selected"
-                                {% endif %}
-                              >
-                                {{ option.name | escape }}
-                              </option>
-                            {%- endfor -%}
-                          </select>
-                          <span class="svg-wrapper">
-                            {{- 'icon-caret.svg' | inline_asset_content -}}
-                          </span>
-                        </div>
-                      {% endcomment %}
-
                       {%- for option in results.sort_options -%}
                         <label for="mobile-{{ option.value }}" class="">
                           <input
@@ -556,21 +530,6 @@
                               checked
                             {% endif %}
                           >
-
-                          {% comment %}
-                            {%- if presentation == 'image' -%}
-                              <div class="facets__image-wrapper">
-                                {%- if value.image -%}
-                                  {{
-                                    value.image
-                                    | image_url: width: 300
-                                    | image_tag: class: 'facets__image', alt: value.alt
-                                  }}
-                                {%- endif -%}
-                              </div>
-                            {%- else -%}
-                          {% endcomment %}
-                          {% comment %} {{- 'square.svg' | inline_asset_content -}} {% endcomment %}
                           <div class="icon-radio">
                             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                               <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor"/>
@@ -582,8 +541,6 @@
                               </svg>
                             </div>
                           </div>
-                          {% comment %} {%- endif -%} {% endcomment %}
-
                           {{ option.name | escape }}
                         </label>
                       {%- endfor -%}
