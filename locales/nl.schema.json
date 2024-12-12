@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -1189,6 +1198,175 @@
       },
       "presets": {
         "name": "Bannerafbeelding"
+      }
+    },
+    "video-with-text": {
+      "name": "Afbeelding met tekst",
+      "settings": {
+        "image": {
+          "label": "Afbeelding"
+        },
+        "height": {
+          "options__1": {
+            "label": "Aanpassen aan afbeelding"
+          },
+          "options__2": {
+            "label": "Klein"
+          },
+          "options__3": {
+            "label": "Gemiddeld"
+          },
+          "label": "Hoogte afbeelding",
+          "options__4": {
+            "label": "Groot"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "Afbeelding eerst"
+          },
+          "options__2": {
+            "label": "Tweede afbeelding"
+          },
+          "label": "Plaatsing van afbeelding op desktop",
+          "info": "Afbeelding eerst is de standaard opmaak voor mobiel."
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "Klein"
+          },
+          "options__2": {
+            "label": "Gemiddeld"
+          },
+          "options__3": {
+            "label": "Groot"
+          },
+          "label": "Breedte van bureaubladafbeelding",
+          "info": "De afbeelding wordt automatisch geoptimaliseerd voor mobiel."
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "Links"
+          },
+          "options__3": {
+            "label": "Rechts"
+          },
+          "label": "Uitlijning van content op desktop",
+          "options__2": {
+            "label": "Centraal"
+          }
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "Boven"
+          },
+          "options__2": {
+            "label": "Midden"
+          },
+          "options__3": {
+            "label": "Onder"
+          },
+          "label": "Positie van content op desktop"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "Geen overlappingen"
+          },
+          "options__2": {
+            "label": "Overlappingen"
+          },
+          "label": "Content-opmaak"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "Links"
+          },
+          "options__3": {
+            "label": "Rechts"
+          },
+          "label": "Uitlijning van content op mobiel",
+          "options__2": {
+            "label": "Centraal"
+          }
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Opschrift",
+          "settings": {
+            "heading": {
+              "label": "Opschrift",
+              "default": "Afbeelding met tekst"
+            }
+          }
+        },
+        "text": {
+          "name": "Tekst",
+          "settings": {
+            "text": {
+              "label": "Content",
+              "default": "<p>Plaats een afbeelding bij stukken tekst om de aandacht op je gekozen product, collectie of blogpost te richten. Voeg details over beschikbaarheid en stijl toe of plaats een productrecensie.</p>"
+            },
+            "text_style": {
+              "label": "Tekststijl",
+              "options__1": {
+                "label": "Hoofdtekst"
+              },
+              "options__2": {
+                "label": "Subtitel"
+              }
+            }
+          }
+        },
+        "button": {
+          "name": "Knop",
+          "settings": {
+            "button_label": {
+              "label": "Knop met tekstlabel",
+              "info": "Laat het label leeg om de knop te verbergen.",
+              "default": "Knoplabel"
+            },
+            "button_link": {
+              "label": "Knop met link"
+            },
+            "outline_button": {
+              "label": "Gebruik de knopstijl Omlijnen"
+            }
+          }
+        },
+        "caption": {
+          "name": "Bijschrift",
+          "settings": {
+            "text": {
+              "label": "Tekst",
+              "default": "Voeg een tagline toe"
+            },
+            "text_style": {
+              "label": "Tekststijl",
+              "options__1": {
+                "label": "Subtitel"
+              },
+              "options__2": {
+                "label": "Hoofdletters"
+              }
+            },
+            "caption_size": {
+              "label": "Tekstgrootte",
+              "options__1": {
+                "label": "Klein"
+              },
+              "options__2": {
+                "label": "Gemiddeld"
+              },
+              "options__3": {
+                "label": "Groot"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Afbeelding met tekst"
       }
     },
     "image-with-text": {

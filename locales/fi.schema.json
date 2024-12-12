@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -1189,6 +1198,175 @@
       },
       "presets": {
         "name": "Kuvabanneri"
+      }
+    },
+    "video-with-text": {
+      "name": "Kuva tekstillä",
+      "settings": {
+        "image": {
+          "label": "Kuva"
+        },
+        "height": {
+          "options__1": {
+            "label": "Sovita kuvaan"
+          },
+          "options__2": {
+            "label": "Pieni"
+          },
+          "options__3": {
+            "label": "Keskisuuri"
+          },
+          "label": "Kuvan korkeus",
+          "options__4": {
+            "label": "Suuri"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "Kuva ensin"
+          },
+          "options__2": {
+            "label": "Toinen kuva"
+          },
+          "label": "Työpöytäkuvan sijoitus",
+          "info": "Kuva ensin on oletusarvoinen asettelu mobiilissa."
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "Pieni"
+          },
+          "options__2": {
+            "label": "Keskisuuri"
+          },
+          "options__3": {
+            "label": "Suuri"
+          },
+          "label": "Työpöytäkuvan leveys",
+          "info": "Kuva optimoidaan automaattisesti mobiililaitteille."
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "Vasemmalla"
+          },
+          "options__2": {
+            "label": "Keskitetty"
+          },
+          "options__3": {
+            "label": "Oikealla"
+          },
+          "label": "Työpöydän sisällön kohdistus"
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "Ylös"
+          },
+          "options__2": {
+            "label": "Keskelle"
+          },
+          "options__3": {
+            "label": "Alas"
+          },
+          "label": "Työpöytäsisällön sijainti"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "Ei päällekkäisyyksiä"
+          },
+          "options__2": {
+            "label": "Päällekkäisyys"
+          },
+          "label": "Sisällön pohja"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "Vasemmalla"
+          },
+          "options__2": {
+            "label": "Keskitetty"
+          },
+          "options__3": {
+            "label": "Oikealla"
+          },
+          "label": "Mobiilisisällön tasaus"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Otsikko",
+          "settings": {
+            "heading": {
+              "label": "Otsikko",
+              "default": "Kuva tekstillä"
+            }
+          }
+        },
+        "text": {
+          "name": "Teksti",
+          "settings": {
+            "text": {
+              "label": "Sisältö",
+              "default": "<p>Korosta valitsemaasi tuotetta, kokoelmaa tai blogipostausta lisäämällä kuvaan teksti. Lisää tietoa saatavuudesta tai tyylistä tai näytä vaikkapa arvostelu.</p>"
+            },
+            "text_style": {
+              "label": "Tekstityyli",
+              "options__1": {
+                "label": "Leipäteksti"
+              },
+              "options__2": {
+                "label": "Alaotsikko"
+              }
+            }
+          }
+        },
+        "button": {
+          "name": "Painike",
+          "settings": {
+            "button_label": {
+              "label": "Tekstipainike",
+              "info": "Jos haluat piilottaa painikkeen, jätä painikkeen teksti tyhjäksi.",
+              "default": "Tekstipainike"
+            },
+            "button_link": {
+              "label": "Painikelinkki"
+            },
+            "outline_button": {
+              "label": "Käytä ääriviivallista painiketyyliä"
+            }
+          }
+        },
+        "caption": {
+          "name": "Kuvateksti",
+          "settings": {
+            "text": {
+              "label": "Teksti",
+              "default": "Lisää iskulause"
+            },
+            "text_style": {
+              "label": "Tekstityyli",
+              "options__1": {
+                "label": "Alaotsikko"
+              },
+              "options__2": {
+                "label": "Isot kirjaimet"
+              }
+            },
+            "caption_size": {
+              "label": "Tekstin koko",
+              "options__1": {
+                "label": "Pieni"
+              },
+              "options__2": {
+                "label": "Keskisuuri"
+              },
+              "options__3": {
+                "label": "Suuri"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Kuva tekstillä"
       }
     },
     "image-with-text": {

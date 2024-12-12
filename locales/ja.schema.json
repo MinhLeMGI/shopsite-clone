@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -1189,6 +1198,175 @@
       },
       "presets": {
         "name": "画像バナー"
+      }
+    },
+    "video-with-text": {
+      "name": "テキスト付き画像",
+      "settings": {
+        "image": {
+          "label": "画像"
+        },
+        "height": {
+          "options__1": {
+            "label": "画像に合わせる"
+          },
+          "options__2": {
+            "label": "小"
+          },
+          "options__3": {
+            "label": "中"
+          },
+          "label": "画像の高さ",
+          "options__4": {
+            "label": "大"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "右"
+          },
+          "options__2": {
+            "label": "左"
+          },
+          "label": "デスクトップ画像の配置",
+          "info": "最初の画像は、デフォルトのモバイルレイアウトです。"
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "小"
+          },
+          "options__2": {
+            "label": "中"
+          },
+          "options__3": {
+            "label": "大"
+          },
+          "label": "デスクトップ画像の幅",
+          "info": "画像はモバイル用に自動で最適化されます。"
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "左"
+          },
+          "options__3": {
+            "label": "右"
+          },
+          "label": "デスクトップのコンテンツアラインメント",
+          "options__2": {
+            "label": "中央"
+          }
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "上"
+          },
+          "options__2": {
+            "label": "中位"
+          },
+          "options__3": {
+            "label": "下"
+          },
+          "label": "デスクトップのコンテンツ位置"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "オーバーラップなし"
+          },
+          "options__2": {
+            "label": "オーバーラップ"
+          },
+          "label": "コンテンツのレイアウト"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "左"
+          },
+          "options__3": {
+            "label": "右"
+          },
+          "label": "モバイルのコンテンツアライメント",
+          "options__2": {
+            "label": "中央"
+          }
+        }
+      },
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading": {
+              "label": "見出し",
+              "default": "テキスト付き画像"
+            }
+          },
+          "name": "見出し"
+        },
+        "text": {
+          "settings": {
+            "text": {
+              "label": "コンテンツ",
+              "default": "<p>選択した商品、コレクション、ブログ記事に注目を集めるため、テキストと画像を組み合わせます。可用性、スタイル、またはレビュー提供についての詳細を追加します。</p>"
+            },
+            "text_style": {
+              "label": "テキストスタイル",
+              "options__1": {
+                "label": "本文"
+              },
+              "options__2": {
+                "label": "字幕"
+              }
+            }
+          },
+          "name": "テキスト"
+        },
+        "button": {
+          "settings": {
+            "button_label": {
+              "label": "ボタンのラベル",
+              "info": "ボタンを非表示にするには、ラベルを空白にします。",
+              "default": "ボタンのラベル"
+            },
+            "button_link": {
+              "label": "ボタンのリンク"
+            },
+            "outline_button": {
+              "label": "アウトラインボタンのスタイルを使用する"
+            }
+          },
+          "name": "ボタン"
+        },
+        "caption": {
+          "name": "キャプション",
+          "settings": {
+            "text": {
+              "label": "テキスト",
+              "default": "タグラインを追加"
+            },
+            "text_style": {
+              "label": "テキストスタイル",
+              "options__1": {
+                "label": "サブタイトル"
+              },
+              "options__2": {
+                "label": "大文字"
+              }
+            },
+            "caption_size": {
+              "label": "テキストサイズ",
+              "options__1": {
+                "label": "小"
+              },
+              "options__2": {
+                "label": "中"
+              },
+              "options__3": {
+                "label": "大"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "テキスト付き画像"
       }
     },
     "image-with-text": {

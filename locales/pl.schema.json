@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -1189,6 +1198,175 @@
       },
       "presets": {
         "name": "Baner z obrazem"
+      }
+    },
+    "video-with-text": {
+      "name": "Obraz z tekstem",
+      "settings": {
+        "image": {
+          "label": "Obraz"
+        },
+        "height": {
+          "options__1": {
+            "label": "Dostosuj do obrazu"
+          },
+          "options__2": {
+            "label": "Mały"
+          },
+          "options__3": {
+            "label": "Średni"
+          },
+          "label": "Wysokość obrazu",
+          "options__4": {
+            "label": "Duży"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "Najpierw obraz"
+          },
+          "options__2": {
+            "label": "Drugi obraz"
+          },
+          "label": "Umieszczanie obrazów na pulpicie",
+          "info": "Najpierw obraz to domyślny układ na urządzeniu mobilnym"
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "Mały"
+          },
+          "options__2": {
+            "label": "Średni"
+          },
+          "options__3": {
+            "label": "Duży"
+          },
+          "label": "Szerokość obrazu pulpitu",
+          "info": "Obraz jest automatycznie optymalizowany dla urządzeń mobilnych."
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "Lewa strona"
+          },
+          "options__2": {
+            "label": "Środek"
+          },
+          "options__3": {
+            "label": "Prawa strona"
+          },
+          "label": "Wyrównanie treści na komputerze"
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "Góra"
+          },
+          "options__2": {
+            "label": "Środek"
+          },
+          "options__3": {
+            "label": "Dół"
+          },
+          "label": "Pozycja treści na pulpicie"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "Bez nakładania"
+          },
+          "options__2": {
+            "label": "Nakładanie się"
+          },
+          "label": "Układ zawartości"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "Lewa strona"
+          },
+          "options__2": {
+            "label": "Środek"
+          },
+          "options__3": {
+            "label": "Prawa strona"
+          },
+          "label": "Wyrównanie treści na urządzeniu mobilnym"
+        }
+      },
+      "blocks": {
+        "heading": {
+          "name": "Nagłówek",
+          "settings": {
+            "heading": {
+              "label": "Nagłówek",
+              "default": "Obraz z tekstem"
+            }
+          }
+        },
+        "text": {
+          "name": "Tekst",
+          "settings": {
+            "text": {
+              "label": "Treść",
+              "default": "<p>Połącz tekst z obrazem, aby skierować uwagę na wybrany produkt, kolekcję lub wpis na blogu. Dodaj szczegóły dotyczące dostępności, stylu lub dołącz recenzję.</p>"
+            },
+            "text_style": {
+              "label": "Styl tekstu",
+              "options__1": {
+                "label": "Tekst podstawowy"
+              },
+              "options__2": {
+                "label": "Podtytuł"
+              }
+            }
+          }
+        },
+        "button": {
+          "name": "Przycisk",
+          "settings": {
+            "button_label": {
+              "label": "Przycisk z etykietą",
+              "info": "Pozostaw etykietę pustą, aby ukryć przycisk.",
+              "default": "Przycisk z etykietą"
+            },
+            "button_link": {
+              "label": "Link przycisku"
+            },
+            "outline_button": {
+              "label": "Użyj stylu przycisku konspektu"
+            }
+          }
+        },
+        "caption": {
+          "name": "Napisy",
+          "settings": {
+            "text": {
+              "label": "Tekst",
+              "default": "Dodaj slogan"
+            },
+            "text_style": {
+              "label": "Styl tekstu",
+              "options__1": {
+                "label": "Podtytuł"
+              },
+              "options__2": {
+                "label": "Duże litery"
+              }
+            },
+            "caption_size": {
+              "label": "Rozmiar tekstu",
+              "options__1": {
+                "label": "Mały"
+              },
+              "options__2": {
+                "label": "Średni"
+              },
+              "options__3": {
+                "label": "Duży"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Obraz z tekstem"
       }
     },
     "image-with-text": {

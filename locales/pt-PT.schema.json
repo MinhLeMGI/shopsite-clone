@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -1189,6 +1198,175 @@
       },
       "presets": {
         "name": "Faixa de imagem"
+      }
+    },
+    "video-with-text": {
+      "name": "Imagem com texto",
+      "settings": {
+        "image": {
+          "label": "Imagem"
+        },
+        "height": {
+          "options__1": {
+            "label": "Adaptar à imagem"
+          },
+          "options__2": {
+            "label": "Pequeno"
+          },
+          "options__3": {
+            "label": "Médio"
+          },
+          "label": "Altura da imagem",
+          "options__4": {
+            "label": "Grande"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "Imagem primeiro"
+          },
+          "options__2": {
+            "label": "Segunda imagem"
+          },
+          "label": "Posicionamento da imagem em desktop",
+          "info": "Imagem primeiro é o esquema predefinido para dispositivos móveis."
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "Pequeno"
+          },
+          "options__2": {
+            "label": "Médio"
+          },
+          "options__3": {
+            "label": "Grande"
+          },
+          "label": "Largura da imagem em desktop",
+          "info": "A imagem é otimizada automaticamente em dispositivos móveis."
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "Esquerda"
+          },
+          "options__3": {
+            "label": "Direita"
+          },
+          "label": "Alinhamento do conteúdo em desktop",
+          "options__2": {
+            "label": "Ao centro"
+          }
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "Em cima"
+          },
+          "options__2": {
+            "label": "Meio"
+          },
+          "options__3": {
+            "label": "Em baixo"
+          },
+          "label": "Posição do conteúdo em desktop"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "Sem sobreposição"
+          },
+          "options__2": {
+            "label": "Sobreposição"
+          },
+          "label": "Esquema do conteúdo"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "Esquerda"
+          },
+          "options__3": {
+            "label": "Direita"
+          },
+          "label": "Alinhamento do conteúdo em dispositivos móveis",
+          "options__2": {
+            "label": "Ao centro"
+          }
+        }
+      },
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading": {
+              "label": "Título",
+              "default": "Imagem com texto"
+            }
+          },
+          "name": "Cabeçalho"
+        },
+        "text": {
+          "settings": {
+            "text": {
+              "label": "Conteúdo",
+              "default": "<p>Emparelhe texto com uma imagem para destacar o produto, a coleção ou a publicação no blogue escolhido. Adicione informações sobre disponibilidade, estilo ou até mesmo uma avaliação.</p>"
+            },
+            "text_style": {
+              "label": "Estilo de texto",
+              "options__1": {
+                "label": "Corpo"
+              },
+              "options__2": {
+                "label": "Legenda"
+              }
+            }
+          },
+          "name": "Texto"
+        },
+        "button": {
+          "settings": {
+            "button_label": {
+              "label": "Etiqueta do botão",
+              "info": "Deixe a etiqueta em branco para ocultar o botão.",
+              "default": "Etiqueta do botão"
+            },
+            "button_link": {
+              "label": "Ligação do botão"
+            },
+            "outline_button": {
+              "label": "Utilizar estilo de botão de contorno"
+            }
+          },
+          "name": "Botão"
+        },
+        "caption": {
+          "name": "Legenda",
+          "settings": {
+            "text": {
+              "label": "Texto",
+              "default": "Adicionar um slogan"
+            },
+            "text_style": {
+              "label": "Estilo de texto",
+              "options__1": {
+                "label": "Legenda"
+              },
+              "options__2": {
+                "label": "Maiúsculas"
+              }
+            },
+            "caption_size": {
+              "label": "Tamanho do texto",
+              "options__1": {
+                "label": "Pequeno"
+              },
+              "options__2": {
+                "label": "Médio"
+              },
+              "options__3": {
+                "label": "Grande"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Imagem com texto"
       }
     },
     "image-with-text": {

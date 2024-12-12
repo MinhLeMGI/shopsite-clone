@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -1189,6 +1198,175 @@
       },
       "presets": {
         "name": "圖片橫幅"
+      }
+    },
+    "video-with-text": {
+      "name": "附文字的圖片",
+      "settings": {
+        "image": {
+          "label": "圖片"
+        },
+        "height": {
+          "options__1": {
+            "label": "配合圖片"
+          },
+          "options__2": {
+            "label": "小"
+          },
+          "options__3": {
+            "label": "中"
+          },
+          "label": "圖片高度",
+          "options__4": {
+            "label": "大"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "先顯示圖片"
+          },
+          "options__2": {
+            "label": "後顯示圖片"
+          },
+          "label": "電腦版圖片位置",
+          "info": "圖片會先預設為行動版版面配置。"
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "小"
+          },
+          "options__2": {
+            "label": "中"
+          },
+          "options__3": {
+            "label": "大"
+          },
+          "label": "電腦版圖片寬度",
+          "info": "行動版的圖片會自動調整大小。"
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "靠左"
+          },
+          "options__3": {
+            "label": "靠右"
+          },
+          "label": "電腦版內容對齊方式",
+          "options__2": {
+            "label": "置中"
+          }
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "靠上"
+          },
+          "options__2": {
+            "label": "置中"
+          },
+          "options__3": {
+            "label": "靠下"
+          },
+          "label": "電腦版內容位置"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "不可重疊"
+          },
+          "options__2": {
+            "label": "可重疊"
+          },
+          "label": "內容版面配置"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "靠左"
+          },
+          "options__3": {
+            "label": "靠右"
+          },
+          "label": "行動版內容對齊方式",
+          "options__2": {
+            "label": "置中"
+          }
+        }
+      },
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading": {
+              "label": "標題",
+              "default": "附文字的圖片"
+            }
+          },
+          "name": "標題"
+        },
+        "text": {
+          "settings": {
+            "text": {
+              "label": "內容",
+              "default": "<p>文字搭配圖片，以便強調特定商品、商品系列或網誌文章。您可以加上各種有關可用性、樣式的詳細資料，甚至可以提供使用心得。</p>"
+            },
+            "text_style": {
+              "label": "文字樣式",
+              "options__1": {
+                "label": "內文"
+              },
+              "options__2": {
+                "label": "副標題"
+              }
+            }
+          },
+          "name": "文字"
+        },
+        "button": {
+          "settings": {
+            "button_label": {
+              "label": "按鈕標籤",
+              "info": "將標籤保留空白以隱藏按鈕。",
+              "default": "按鈕標籤"
+            },
+            "button_link": {
+              "label": "按鈕連結"
+            },
+            "outline_button": {
+              "label": "使用外框按鈕樣式"
+            }
+          },
+          "name": "按鈕"
+        },
+        "caption": {
+          "name": "說明",
+          "settings": {
+            "text": {
+              "label": "文字",
+              "default": "新增標語"
+            },
+            "text_style": {
+              "label": "文字樣式",
+              "options__1": {
+                "label": "副標題"
+              },
+              "options__2": {
+                "label": "大寫"
+              }
+            },
+            "caption_size": {
+              "label": "文字大小",
+              "options__1": {
+                "label": "小"
+              },
+              "options__2": {
+                "label": "中"
+              },
+              "options__3": {
+                "label": "大"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "附文字的圖片"
       }
     },
     "image-with-text": {

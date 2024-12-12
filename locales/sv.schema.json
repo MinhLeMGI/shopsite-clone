@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "settings_schema": {
     "colors": {
@@ -1189,6 +1198,175 @@
       },
       "presets": {
         "name": "Bildbanner"
+      }
+    },
+    "video-with-text": {
+      "name": "Bild med text",
+      "settings": {
+        "image": {
+          "label": "Bild"
+        },
+        "height": {
+          "options__1": {
+            "label": "Anpassa till bild"
+          },
+          "options__2": {
+            "label": "Liten"
+          },
+          "options__3": {
+            "label": "Medel"
+          },
+          "label": "Bildhöjd",
+          "options__4": {
+            "label": "Stor"
+          }
+        },
+        "layout": {
+          "options__1": {
+            "label": "Bild först"
+          },
+          "options__2": {
+            "label": "Andra bild"
+          },
+          "label": "Placering av datorbild",
+          "info": "Bild först är standard-layout för mobil."
+        },
+        "desktop_image_width": {
+          "options__1": {
+            "label": "Liten"
+          },
+          "options__2": {
+            "label": "Medel"
+          },
+          "options__3": {
+            "label": "Stor"
+          },
+          "label": "Bildbredd för dator",
+          "info": "Bilden optimeras automatiskt för mobilen."
+        },
+        "desktop_content_alignment": {
+          "options__1": {
+            "label": "Vänster"
+          },
+          "options__3": {
+            "label": "Höger"
+          },
+          "label": "Justering av innehåll på skrivbord",
+          "options__2": {
+            "label": "Centrera"
+          }
+        },
+        "desktop_content_position": {
+          "options__1": {
+            "label": "Högst upp"
+          },
+          "options__2": {
+            "label": "Mitten"
+          },
+          "options__3": {
+            "label": "Längst ner"
+          },
+          "label": "Innehållsposition på dator"
+        },
+        "content_layout": {
+          "options__1": {
+            "label": "Ingen överlappning"
+          },
+          "options__2": {
+            "label": "Överlappande"
+          },
+          "label": "Innehållslayout"
+        },
+        "mobile_content_alignment": {
+          "options__1": {
+            "label": "Vänster"
+          },
+          "options__3": {
+            "label": "Höger"
+          },
+          "label": "Linjering av innehåll på mobil",
+          "options__2": {
+            "label": "Centrera"
+          }
+        }
+      },
+      "blocks": {
+        "heading": {
+          "settings": {
+            "heading": {
+              "label": "Rubrik",
+              "default": "Bild med text"
+            }
+          },
+          "name": "Rubrik"
+        },
+        "text": {
+          "settings": {
+            "text": {
+              "label": "Innehåll",
+              "default": "<p>Para ihop text med en bild för att ge fokus åt vald produkt, produktserie eller blogginlägg. Lägg till information om tillgänglighet, stil eller tillhandahåll en recension.</p>"
+            },
+            "text_style": {
+              "label": "Textstil",
+              "options__1": {
+                "label": "Brödtext"
+              },
+              "options__2": {
+                "label": "Underrubrik"
+              }
+            }
+          },
+          "name": "Text"
+        },
+        "button": {
+          "settings": {
+            "button_label": {
+              "label": "Knappetikett",
+              "info": "Lämna etiketten tom eller dölj knappen.",
+              "default": "Knappetikett"
+            },
+            "button_link": {
+              "label": "Knapplänk"
+            },
+            "outline_button": {
+              "label": "Använd knappkontursstil"
+            }
+          },
+          "name": "Knapp"
+        },
+        "caption": {
+          "name": "Rubrik",
+          "settings": {
+            "text": {
+              "label": "Text",
+              "default": "Lägg till en slogan"
+            },
+            "text_style": {
+              "label": "Textstil",
+              "options__1": {
+                "label": "Underrubrik"
+              },
+              "options__2": {
+                "label": "Stora bokstäver"
+              }
+            },
+            "caption_size": {
+              "label": "Textstorlek",
+              "options__1": {
+                "label": "Liten"
+              },
+              "options__2": {
+                "label": "Medel"
+              },
+              "options__3": {
+                "label": "Stor"
+              }
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Bild med text"
       }
     },
     "image-with-text": {

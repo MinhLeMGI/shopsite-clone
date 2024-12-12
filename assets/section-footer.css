@@ -28,6 +28,20 @@
   column-gap: 0;
 }
 
+@media screen and (min-width: 1024px) {
+  .footer__blocks-wrapper.grid {
+    margin-left: 52px;
+    margin-right: 52px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .footer__blocks-wrapper.grid {
+    margin-left: 64px;
+    margin-right: 64px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .footer__blocks-wrapper.grid {
     flex-direction: column;
