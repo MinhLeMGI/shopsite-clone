@@ -210,43 +210,63 @@
           </span>
         </label>
         <input type="checkbox" id="account-icon-checkbox" class="">
-        <ul class="icon-nav" role="list">
-          {% if customer -%}
-          {%- else %}
-            <div class="account_btn_container">
-              <div class="account_btn b">
-                <a href="https://accounts.drberg.com/orders">Sign In or Create Account</a>
-              </div>
-            </div>
-          {% endif %}
-
-          {% if customer %}
-            Welcome back
-            {%- if customer.first_name -%}
-              , <br>
-              <span class="customer_name">
-                {{- customer.first_name }}
-                {{ customer.last_name }}!</span
-              >
-            {%- endif -%}
-          {% endif %}
-
-          {% for link in section.settings.icon_menu.links %}
-            <li>
-              {%- if forloop.index <= 3 -%}
-                <div class="account_sqr">
-                  {% case forloop.index %}
-                    {% when 1 %}
-                      {% render 'icon-orders' %}
-                    {% when 2 %}
-                      {% render 'icon-my-account-profile' %}
-                    {% when 3 %}
-                      {% render 'icon-my-subscriptions' %}
-                  {% endcase %}
+        {% comment %}
+          <ul class="icon-nav" role="list">
+            {% if customer -%}
+            {%- else %}
+              <div class="account_btn_container">
+                <div class="account_btn b">
+                  <a href="https://accounts.drberg.com/orders">Sign In or Create Account</a>
                 </div>
+              </div>
+            {% endif %}
+
+            {% if customer %}
+              Welcome back
+              {%- if customer.first_name -%}
+                , <br>
+                <span class="customer_name">
+                  {{- customer.first_name }}
+                  {{ customer.last_name }}!</span
+                >
               {%- endif -%}
-              {%- if forloop.index == 4 -%}
-                {%- if customer -%}
+            {% endif %}
+
+            {% for link in section.settings.icon_menu.links %}
+              <li>
+                {%- if forloop.index <= 3 -%}
+                  <div class="account_sqr">
+                    {% case forloop.index %}
+                      {% when 1 %}
+                        {% render 'icon-orders' %}
+                      {% when 2 %}
+                        {% render 'icon-my-account-profile' %}
+                      {% when 3 %}
+                        {% render 'icon-my-subscriptions' %}
+                    {% endcase %}
+                  </div>
+                {%- endif -%}
+                {%- if forloop.index == 4 -%}
+                  {%- if customer -%}
+                    <a
+                      class="nav__item"
+                      href="{{ link.url }}"
+                      {% if link.current %}
+                        aria-current="page"
+                      {% endif %}
+                    >
+                      {% assign links = link.title | split: ' | ' %}
+                      {% for bla in links %}
+                        {%- if forloop.index == 2 -%}
+                          <span class="nav_short">{{ bla }}</span>
+                        {% else %}
+                          {{ bla -}}
+                          <br>
+                        {%- endif -%}
+                      {% endfor %}
+                    </a>
+                  {%- endif -%}
+                {% else %}
                   <a
                     class="nav__item"
                     href="{{ link.url }}"
@@ -265,36 +285,18 @@
                     {% endfor %}
                   </a>
                 {%- endif -%}
-              {% else %}
-                <a
-                  class="nav__item"
-                  href="{{ link.url }}"
-                  {% if link.current %}
-                    aria-current="page"
-                  {% endif %}
-                >
-                  {% assign links = link.title | split: ' | ' %}
-                  {% for bla in links %}
-                    {%- if forloop.index == 2 -%}
-                      <span class="nav_short">{{ bla }}</span>
-                    {% else %}
-                      {{ bla -}}
-                      <br>
-                    {%- endif -%}
-                  {% endfor %}
-                </a>
+              </li>
+
+              {%- if forloop.index == 3 -%}
+                {%- if customer -%}<hr>{%- endif -%}
               {%- endif -%}
-            </li>
+            {% endfor %}
 
-            {%- if forloop.index == 3 -%}
-              {%- if customer -%}<hr>{%- endif -%}
+            {%- if customer -%}
+              {{ 'Sign Out' | customer_logout_link | replace: '<a', '<a class="nav__item sign_out"' }}
             {%- endif -%}
-          {% endfor %}
-
-          {%- if customer -%}
-            {{ 'Sign Out' | customer_logout_link | replace: '<a', '<a class="nav__item sign_out"' }}
-          {%- endif -%}
-        </ul>
+          </ul>
+        {% endcomment %}
       {%- endif -%}
 
       {%- for block in section.blocks -%}
@@ -533,12 +535,12 @@
       "default": "main-menu",
       "label": "t:sections.header.settings.menu.label"
     },
-    {
-      "type": "link_list",
-      "id": "icon_menu",
-      "label": "Account Icon Menu",
-      "info": "Select a navigation menu to show under the Account/SignIn Icon."
-    },
+    //{
+    //  "type": "link_list",
+    //  "id": "icon_menu",
+    //   "label": "Account Icon Menu",
+    //  "info": "Select a navigation menu to show under the Account/SignIn Icon."
+    //},
     //{
     // "type": "select",
     // "id": "sticky_header_type",
