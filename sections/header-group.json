@@ -50,7 +50,7 @@
       "settings": {
         "menu": "main-menu",
         "show_line_separator": true,
-        "icon_menu": "",
+        "icon_menu": "main-menu",
         "color_scheme": "scheme-2",
         "menu_color_scheme": "scheme-2",
         "enable_country_selector": false,
