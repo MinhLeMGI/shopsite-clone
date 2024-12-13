@@ -17,7 +17,7 @@
 
 .drawer__inner {
   height: 100%;
-  width: 40rem;
+  width: 56rem;
   max-width: calc(100vw - 3rem);
   padding: 0 1.5rem;
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
@@ -102,6 +102,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 .drawer__close .svg-wrapper {
   height: 2rem;
   width: 2rem;
+  color: var(--color-foreground);
 }
 
 .drawer__contents {
