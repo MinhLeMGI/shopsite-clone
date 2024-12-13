@@ -20,7 +20,7 @@
             "heading_size": "h1",
             "subheading": "15% OFF ALL IMMUNE SUPPORT PRODUCTS",
             "button_label": "Shop Now",
-            "link": "",
+            "link": "shopify://collections/immune-support",
             "button_style_secondary": false,
             "box_align": "middle-left",
             "show_text_box": true,
