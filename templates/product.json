@@ -23,8 +23,19 @@
           "type": "title",
           "settings": {}
         },
-        "rating": {
-          "type": "rating",
+        "seguno_reviews_review_rating_4EanWa": {
+          "type": "shopify://apps/seguno-reviews/blocks/review_rating/a10c353e-1472-4621-ba04-289c48879459",
+          "settings": {
+            "product": "{{product}}",
+            "product_exclusion_tag": "reviews-excluded,skip-review-request-email",
+            "font_size": 16,
+            "text_alignment": "left",
+            "star_color": "#000000",
+            "text_color": "#000000"
+          }
+        },
+        "description": {
+          "type": "description",
           "settings": {}
         },
         "price": {
@@ -49,20 +60,32 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {}
+        "seguno_reviews_review_button_WUr8GD": {
+          "type": "shopify://apps/seguno-reviews/blocks/review_button/a10c353e-1472-4621-ba04-289c48879459",
+          "settings": {
+            "product": "{{product}}",
+            "product_exclusion_tag": "reviews-excluded,skip-review-request-email",
+            "content": "<p>We'd love to hear your feedback! Please share your thoughts with us directly by writing a review. Thanks!</p>",
+            "font_size": 18,
+            "alignment": "start",
+            "font_weight": true,
+            "accent_color": "#000000",
+            "accent_text_color": "#ffffff",
+            "button_color": "#000000",
+            "button_text_color": "#ffffff"
+          }
         }
       },
       "block_order": [
         "vendor",
         "title",
-        "rating",
+        "seguno_reviews_review_rating_4EanWa",
+        "description",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description"
+        "seguno_reviews_review_button_WUr8GD"
       ],
       "settings": {
         "enable_sticky_info": true,
