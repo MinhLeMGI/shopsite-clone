@@ -19,9 +19,27 @@
       display: none;
     }
   }
-
+  @media screen and (max-width: 640px) {
+    .mobile-visually-hidden {
+      position: absolute !important;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+      clip: rect(0 0 0 0);
+      word-wrap: normal !important;
+    }
+  }
   .menu-drawer-container {
     display: flex;
+  }
+
+  .menu-drawer-container .header__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .list-menu {
@@ -160,11 +178,16 @@
     <div class="header__icons">
       {% comment %} account {% endcomment %}
       {%- if shop.customer_accounts_enabled -%}
-        <a
-          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
-          class="header__icon header__icon--account link focus-inset"
-          rel="nofollow"
-        >
+        <label for="account-icon-checkbox" class="header__icon header__icon--account link focus-inset">
+          {% comment %}
+            <a
+              href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+              class="header__icon header__icon--account link focus-inset"
+              rel="nofollow"
+            >
+
+            </a>
+          {% endcomment %}
           {%- if section.settings.enable_customer_avatar -%}
             <account-icon>
               {%- if customer and customer.has_avatar? -%}
@@ -176,7 +199,7 @@
           {%- else -%}
             <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
           {%- endif -%}
-          <span class="visually-hidden">
+          <span class="mobile-visually-hidden">
             {%- liquid
               if customer
                 echo 'customer.account_fallback' | t
@@ -185,7 +208,93 @@
               endif
             -%}
           </span>
-        </a>
+        </label>
+        <input type="checkbox" id="account-icon-checkbox" class="">
+        <ul class="icon-nav" role="list">
+          {% if customer -%}
+          {%- else %}
+            <div class="account_btn_container">
+              <div class="account_btn b">
+                <a href="https://accounts.drberg.com/orders">Sign In or Create Account</a>
+              </div>
+            </div>
+          {% endif %}
+
+          {% if customer %}
+            Welcome back
+            {%- if customer.first_name -%}
+              , <br>
+              <span class="customer_name">
+                {{- customer.first_name }}
+                {{ customer.last_name }}!</span
+              >
+            {%- endif -%}
+          {% endif %}
+
+          {% for link in section.settings.icon_menu.links %}
+            <li>
+              {%- if forloop.index <= 3 -%}
+                <div class="account_sqr">
+                  {% case forloop.index %}
+                    {% when 1 %}
+                      {% render 'icon-orders' %}
+                    {% when 2 %}
+                      {% render 'icon-my-account-profile' %}
+                    {% when 3 %}
+                      {% render 'icon-my-subscriptions' %}
+                  {% endcase %}
+                </div>
+              {%- endif -%}
+              {%- if forloop.index == 4 -%}
+                {%- if customer -%}
+                  <a
+                    class="nav__item"
+                    href="{{ link.url }}"
+                    {% if link.current %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    {% assign links = link.title | split: ' | ' %}
+                    {% for bla in links %}
+                      {%- if forloop.index == 2 -%}
+                        <span class="nav_short">{{ bla }}</span>
+                      {% else %}
+                        {{ bla -}}
+                        <br>
+                      {%- endif -%}
+                    {% endfor %}
+                  </a>
+                {%- endif -%}
+              {% else %}
+                <a
+                  class="nav__item"
+                  href="{{ link.url }}"
+                  {% if link.current %}
+                    aria-current="page"
+                  {% endif %}
+                >
+                  {% assign links = link.title | split: ' | ' %}
+                  {% for bla in links %}
+                    {%- if forloop.index == 2 -%}
+                      <span class="nav_short">{{ bla }}</span>
+                    {% else %}
+                      {{ bla -}}
+                      <br>
+                    {%- endif -%}
+                  {% endfor %}
+                </a>
+              {%- endif -%}
+            </li>
+
+            {%- if forloop.index == 3 -%}
+              {%- if customer -%}<hr>{%- endif -%}
+            {%- endif -%}
+          {% endfor %}
+
+          {%- if customer -%}
+            {{ 'Sign Out' | customer_logout_link | replace: '<a', '<a class="nav__item sign_out"' }}
+          {%- endif -%}
+        </ul>
       {%- endif -%}
 
       {%- for block in section.blocks -%}
@@ -202,7 +311,7 @@
         {% else %}
           <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
         {% endif %}
-        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        <span class="mobile-visually-hidden">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
             {%- if cart.item_count < 100 -%}
@@ -503,6 +612,12 @@
       "default": true,
       "label": "t:sections.header.settings.enable_customer_avatar.label",
       "info": "t:sections.header.settings.enable_customer_avatar.info"
+    },
+    {
+      "type": "link_list",
+      "id": "icon_menu",
+      "label": "Account Icon Menu",
+      "info": "Select a navigation menu to show under the Account/SignIn Icon."
     },
     {
       "type": "header",
