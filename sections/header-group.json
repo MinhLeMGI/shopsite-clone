@@ -22,7 +22,9 @@
           }
         }
       },
-      "block_order": ["announcement_fJyYGq"],
+      "block_order": [
+        "announcement_fJyYGq"
+      ],
       "settings": {
         "color_scheme": "scheme-fa401209-7081-4e1d-9253-c80f6355149f",
         "show_line_separator": true,
@@ -49,6 +51,7 @@
       "type": "header",
       "settings": {
         "menu": "main-menu",
+        "icon_menu": "account-menu-logged-out",
         "show_line_separator": true,
         "color_scheme": "scheme-2",
         "menu_color_scheme": "scheme-2",
@@ -88,7 +91,11 @@
           }
         }
       },
-      "block_order": ["heading-0", "text-1", "discount-2"],
+      "block_order": [
+        "heading-0",
+        "text-1",
+        "discount-2"
+      ],
       "settings": {
         "section_height": "small",
         "color_scheme": "scheme-65c8b806-69fd-416c-8490-408b5ed44a3d",
@@ -98,5 +105,10 @@
       }
     }
   },
-  "order": ["announcement_bar_GJWjhq", "announcement_bar_pV7KQJ", "header", "promotion"]
+  "order": [
+    "announcement_bar_GJWjhq",
+    "announcement_bar_pV7KQJ",
+    "header",
+    "promotion"
+  ]
 }
