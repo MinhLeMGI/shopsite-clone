@@ -200,6 +200,12 @@ details[open].menu-opening > .menu-drawer__submenu {
   position: relative;
 }
 
+@media screen and (max-width: 767px) {
+  .menu-drawer__utility-links {
+    display: block;
+  }
+}
+
 .header--has-social .menu-drawer__utility-links {
   display: block;
   padding: 2rem 3rem;

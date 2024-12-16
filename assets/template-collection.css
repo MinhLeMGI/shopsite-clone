@@ -136,12 +136,18 @@
 }
 
 .featured_collection--list::-webkit-scrollbar {
-  height: 10px;
+  height: 6px;
+}
+
+@media screen and (max-width: 1023px) {
+  .featured_collection--list::-webkit-scrollbar {
+    height: 4px;
+  }
 }
 
 .featured_collection--list::-webkit-scrollbar-thumb {
   background-color: #222325;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .featured_collection--list::-webkit-scrollbar-track {
