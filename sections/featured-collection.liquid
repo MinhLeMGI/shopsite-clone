@@ -25,15 +25,60 @@
 {%- endif -%}
 
 {%- style -%}
+  .section-{{ section.id }} slider-component {
+    position: relative;
+  }
+  .section-{{ section.id }} .slider-nav {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(50%, -50%);
+    right: 30px;
+    gap: 1rem;
+    flex-direction: column;
+    height: max-content;
+  }
+  @media screen and (max-width: 990px) {
+    .section-{{ section.id }} .slider-nav {
+      right: 50px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .section-{{ section.id }} .slider-nav {
+      right: 0;
+    }
+  }
+  .section-{{ section.id }} .slider-nav .slider-nav__btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #222325;
+    cursor: pointer;
+  }
+
+  .section-{{ section.id }} .slider-nav .slider-nav__btn:hover:not(:disabled) svg {
+    transform: scale(1.25);
+  }
+
+  .section-{{ section.id }} .slider-nav .slider-nav__btn:disabled {
+    background-color: #4a4c4e60;
+    border-color: #4a4c4e80;
+    cursor: default;
+  }
+
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
-  @media screen and (min-width: 750px) {
+  @media screen and (min-width: 768px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .section-{{ section.id }} .slider-nav {
+      display: flex;
     }
   }
 {%- endstyle -%}
@@ -59,7 +104,7 @@
 -%}
 
 <div
-  class="color-{{ section.settings.color_scheme }} isolate gradient"
+  class="section-{{ section.id }} color-{{ section.settings.color_scheme }} isolate gradient"
 >
   <div
     class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
@@ -146,6 +191,28 @@
           {%- endfor -%}
         {%- endfor -%}
       </ul>
+      <div class="slider-nav">
+        <button
+          id="slider-nav-next"
+          type="button"
+          class="slider-nav__btn"
+          name="next"
+          aria-controls="slider-{{ section.id }}"
+        >
+          <span class="visually-hidden">Next</span>
+          {% render 'icon-chevron-right' %}
+        </button>
+        <button
+          id="slider-nav-prev"
+          type="button"
+          class="slider-nav__btn"
+          name="prev"
+          aria-controls="slider-{{ section.id }}"
+        >
+          <span class="visually-hidden">Previous</span>
+          {% render 'icon-chevron-left' %}
+        </button>
+      </div>
       {% comment %}
         {%- if show_mobile_slider or show_desktop_slider -%}
           <div class="slider-buttons">
