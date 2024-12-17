@@ -108,6 +108,59 @@
   transition: none;
 }
 
+.facet-filters__field .sort-by-wrapper {
+  position: relative;
+}
+
+.facet-filters__field .sort-by-wrapper .sort-by-value {
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.4rem;
+}
+
+.facet-filters__field .sort-by-wrapper .sort-by-value .svg-wrapper {
+  margin: auto;
+  height: 1.4rem;
+  width: 1.4rem;
+}
+
+.facet-filters__field .sort-by-wrapper .sort-by-option {
+  position: absolute;
+  visibility: hidden;
+  background-color: white;
+  padding: 0.8rem 0;
+  border-radius: 1rem;
+  z-index: 1;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.facet-filters__field .sort-by-wrapper .sort-by-option-visible {
+  visibility: visible !important;
+}
+
+.facet-filters__field .sort-by-wrapper .sort-by-option > input {
+  display: none;
+}
+
+.facet-filters__field .sort-by-wrapper .sort-by-option > label {
+  white-space: nowrap;
+  padding: 0.2rem 0.5rem;
+}
+
+.facet-filters__field .sort-by-wrapper .sort-by-option .option-active {
+  background-color: #f2f2f2;
+}
+
+.facet-filters__field .sort-by-wrapper .sort-by-option > label:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
 .select .icon-caret {
   width: 10px;
 }

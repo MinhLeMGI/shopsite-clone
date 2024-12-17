@@ -385,3 +385,14 @@ class ButtonFilter extends HTMLElement {
 }
 
 customElements.define('button-filter', ButtonFilter);
+
+class ButtonSortBy extends HTMLElement {
+  constructor() {
+    super();
+    this.addEventListener("click", () => {
+      this.querySelector(".sort-by-option").classList.toggle("sort-by-option-visible");
+    });
+  }
+}
+
+customElements.define('button-sort-by', ButtonSortBy);
