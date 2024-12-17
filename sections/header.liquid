@@ -82,6 +82,101 @@
       padding-top: 0.5rem;
     }
   }
+
+  .header-account--nav {
+    z-index: 1;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #fff;
+    max-width: 440px;
+    min-width: 320px;
+    width: 100%;
+    margin: 0;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px 1px #d4cdcd;
+    list-style: none;
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    gap: 8px;
+    align-items: baseline;
+    visibility: hidden;
+    animation: slide-out 0.3s ease-in-out;
+  }
+
+  .header-account--nav .header-account--nav-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+  }
+  .header-account--nav .header-account--nav-item:hover {
+    opacity: 0.7;
+  }
+  .header-account--nav .header-account--nav-item:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222325;
+    padding: 8px 4px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  .header-account--nav .header-account--nav-item:first-child:hover {
+    opacity: 0.9;
+  }
+  .header-account--nav .header-account--nav-item:first-child a {
+    color: #fff;
+  }
+  .header-account--nav .header-account--nav-item a {
+    text-decoration: none;
+    color: rgb(var(--color-foreground));
+    font-size: 14px;
+  }
+
+  .header__icons .account-icon-checkbox:checked ~ .header-account--nav {
+    opacity: 1;
+    z-index: 2;
+    display: flex;
+    visibility: visible;
+    animation: slide-in 0.3s ease-in-out;
+  }
+
+  .account-icon-checkbox {
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+      visibility: hidden;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  @keyframes slide-out {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
 </style>
 
 {%- style -%}
@@ -126,8 +221,8 @@
     endif
   endfor
 -%}
-
-<sticky-header data-sticky-type="" class="header-wrapper color-scheme-2 gradient header-wrapper--border-bottom">
+<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-scheme-2 gradient header-wrapper--border-bottom">
+{% comment %} <sticky-header data-sticky-type="" class="header-wrapper color-scheme-2 gradient header-wrapper--border-bottom"> {% endcomment %}
   {%- liquid
     assign social_links = false
     assign localization_forms = false
@@ -232,30 +327,29 @@
             -%}
           </span>
         </label>
-        <input type="checkbox" id="account-icon-checkbox" class="">
+        <input type="checkbox" id="account-icon-checkbox" class="account-icon-checkbox">
         <ul class="header-account--nav" role="list">
-          {% if customer -%}
-          {%- else %}
-            <div class="account_btn_container">
-              <div class="account_btn b">
-                <a href="https://accounts.drberg.com/orders">Sign In or Create Account</a>
-              </div>
-            </div>
-          {% endif %}
-
-          {% if customer %}
-            Welcome back
-            {%- if customer.first_name -%}
-              , <br>
-              <span class="customer_name">
-                {{- customer.first_name }}
-                {{ customer.last_name }}!</span
-              >
-            {%- endif -%}
-          {% endif %}
+          <li class="header-account--nav-item">
+            {% if customer %}
+              Welcome back
+              {%- if customer.first_name -%}
+                , <br>
+                <span class="customer_name">
+                  {{- customer.first_name }}
+                  {{ customer.last_name }}!</span
+                >
+                {%- endif -%}
+              {%- else %}
+                <div class="account_btn_container">
+                  <div class="account_btn b">
+                    <a href="https://accounts.drberg.com/orders">Sign In or Create Account</a>
+                  </div>
+                </div>
+              {% endif %}
+            </li>
 
           {% for link in section.settings.icon_menu.links %}
-            <li>
+            <li class="header-account--nav-item">
               {%- if forloop.index <= 3 -%}
                 <div class="account_sqr">
                   {% case forloop.index %}
@@ -364,7 +458,8 @@
       endif
     %}
   </header>
-</sticky-header>
+{% comment %} </sticky-header> {% endcomment %}
+</{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
 {%- if settings.cart_type == 'notification' -%}
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: 'mega' -%}
@@ -566,30 +661,30 @@
       "label": "Account Icon Menu",
       "info": "Select a navigation menu to show under the Account/SignIn Icon."
     },
-    //{
-    // "type": "select",
-    // "id": "sticky_header_type",
-    // "options": [
-    //  {
-    //    "value": "none",
-    //   "label": "t:sections.header.settings.sticky_header_type.options__1.label"
-    // },
-    // {
-    //  "value": "on-scroll-up",
-    //  "label": "t:sections.header.settings.sticky_header_type.options__2.label"
-    //},
-    //{
-    //  "value": "always",
-    //  "label": "t:sections.header.settings.sticky_header_type.options__3.label"
-    //},
-    //{
-    //   "value": "reduce-logo-size",
-    //  "label": "t:sections.header.settings.sticky_header_type.options__4.label"
-    //}
-    // ],
-    //"default": "on-scroll-up",
-    //"label": "t:sections.header.settings.sticky_header_type.label"
-    // },
+    {
+     "type": "select",
+     "id": "sticky_header_type",
+     "options": [
+      {
+        "value": "none",
+       "label": "t:sections.header.settings.sticky_header_type.options__1.label"
+     },
+     {
+      "value": "on-scroll-up",
+      "label": "t:sections.header.settings.sticky_header_type.options__2.label"
+    },
+    {
+      "value": "always",
+      "label": "t:sections.header.settings.sticky_header_type.options__3.label"
+    },
+    {
+       "value": "reduce-logo-size",
+      "label": "t:sections.header.settings.sticky_header_type.options__4.label"
+    }
+     ],
+    "default": "on-scroll-up",
+    "label": "t:sections.header.settings.sticky_header_type.label"
+     },
     {
       "type": "checkbox",
       "id": "show_line_separator",

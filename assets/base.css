@@ -2570,6 +2570,7 @@ input[type="checkbox"] {
   justify-content: flex-end;
   margin-right: 0;
   gap: 8px;
+  position: relative;
 }
 
 .header__icons .header__icon--account.link,
