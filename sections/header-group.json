@@ -52,6 +52,7 @@
       "settings": {
         "menu": "main-menu",
         "icon_menu": "account-menu-logged-out",
+        "sticky_header_type": "always",
         "show_line_separator": true,
         "color_scheme": "scheme-2",
         "menu_color_scheme": "scheme-2",
