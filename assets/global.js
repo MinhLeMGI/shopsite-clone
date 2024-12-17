@@ -812,6 +812,7 @@ class SliderComponent extends HTMLElement {
   setSlidePosition(position) {
     this.slider.scrollTo({
       left: position,
+      behavior: 'smooth',
     });
   }
 }
