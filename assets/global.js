@@ -812,7 +812,7 @@ class SliderComponent extends HTMLElement {
   setSlidePosition(position) {
     this.slider.scrollTo({
       left: position,
-      behavior: 'smooth',
+      behavior: 'smooth'
     });
   }
 }
@@ -907,6 +907,7 @@ class SlideshowComponent extends SliderComponent {
     this.setPositionTimeout = setTimeout(() => {
       this.slider.scrollTo({
         left: position,
+        behavior: 'smooth'
       });
     }, this.announcerBarAnimationDelay);
   }
@@ -1047,6 +1048,7 @@ class SlideshowComponent extends SliderComponent {
       (this.sliderControlLinksArray.indexOf(event.currentTarget) + 1 - this.currentPage);
     this.slider.scrollTo({
       left: slideScrollPosition,
+      behavior: 'smooth',
     });
   }
 }
