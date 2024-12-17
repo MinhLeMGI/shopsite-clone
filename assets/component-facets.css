@@ -131,9 +131,9 @@
   visibility: hidden;
   background-color: white;
   padding: 0.8rem 0;
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   z-index: 1;
-  border: 1px solid;
+  box-shadow: 0px 1px 2px 1px #d4cdcd;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -149,7 +149,7 @@
 
 .facet-filters__field .sort-by-wrapper .sort-by-option > label {
   white-space: nowrap;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 1rem;
 }
 
 .facet-filters__field .sort-by-wrapper .sort-by-option .option-active {
