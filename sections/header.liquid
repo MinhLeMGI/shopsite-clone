@@ -143,10 +143,10 @@
   .header-account--nav .header-account--nav-item:first-child a {
     color: #fff;
   }
-  .header-account--nav .header-account--nav-item:last-child {
+  .header-account--nav .header-account--nav-item.logout {
     padding: 8px 12px;
   }
-  
+
   .header-account--nav .header-account--nav-item a {
     text-decoration: none;
     color: rgb(var(--color-foreground));
@@ -429,7 +429,7 @@
           {% endfor %}
 
           {%- if customer -%}
-            <li class="header-account--nav-item">
+            <li class="header-account--nav-item logout">
               {{ 'Sign Out' | customer_logout_link | replace: '<a', '<a class="nav__item sign_out"' }}
             </li>
           {%- endif -%}
