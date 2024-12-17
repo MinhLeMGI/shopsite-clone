@@ -115,7 +115,7 @@
       top: 40px;
     }
   }
-  
+
   .header-account--nav .header-account--nav-item {
     width: 100%;
     display: flex;
@@ -135,6 +135,7 @@
     padding: 8px 4px;
     border-radius: 4px;
     margin-bottom: 16px;
+    color: #fff;
   }
   .header-account--nav .header-account--nav-item:first-child:hover {
     opacity: 0.9;
@@ -142,10 +143,19 @@
   .header-account--nav .header-account--nav-item:first-child a {
     color: #fff;
   }
+  .header-account--nav .header-account--nav-item.logout {
+    padding: 8px 12px;
+  }
+
   .header-account--nav .header-account--nav-item a {
     text-decoration: none;
     color: rgb(var(--color-foreground));
     font-size: 14px;
+  }
+
+  .header-account--nav hr {
+    margin: 0;
+    width: 100%;
   }
 
   .header__icons .account-icon-checkbox:checked ~ .header-account--nav {
@@ -352,7 +362,7 @@
               {%- else %}
                 <div class="account_btn_container">
                   <div class="account_btn b">
-                    <a href="https://accounts.drberg.com/orders">Sign In or Create Account</a>
+                    <a href="{{ routes.account_login_url }}">Sign In or Create Account</a>
                   </div>
                 </div>
               {% endif %}
@@ -419,7 +429,9 @@
           {% endfor %}
 
           {%- if customer -%}
-            {{ 'Sign Out' | customer_logout_link | replace: '<a', '<a class="nav__item sign_out"' }}
+            <li class="header-account--nav-item logout">
+              {{ 'Sign Out' | customer_logout_link | replace: '<a', '<a class="nav__item sign_out"' }}
+            </li>
           {%- endif -%}
         </ul>
       {%- endif -%}
