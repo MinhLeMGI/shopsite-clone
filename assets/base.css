@@ -2103,14 +2103,14 @@ input[type="checkbox"] {
   position: absolute;
   background-color: rgb(var(--color-button));
   color: rgb(var(--color-button-text));
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 24px;
+  width: 24px;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.9rem;
-  top: -10px;
+  top: -14px;
   right: 0;
   line-height: calc(1 + 0.1 / var(--font-body-scale));
   border: 2px solid #fff;
